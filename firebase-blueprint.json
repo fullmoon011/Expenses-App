@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "UserBackup": {
+      "title": "UserBackup",
+      "description": "Encrypted/structured cloud backup of a user's or family's financial workspace",
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "description": "Firebase Auth UID of the workspace owner",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "workspaceName": {
+          "type": "string",
+          "description": "Display name of the personal or family workspace",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "payload": {
+          "type": "string",
+          "description": "Serialized workspace state",
+          "minLength": 2,
+          "maxLength": 900000
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the backup was first created"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the backup was last updated"
+        }
+      },
+      "required": ["ownerId", "workspaceName", "payload", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/backups/{backupId}": {
+      "schema": { "$ref": "#/entities/UserBackup" },
+      "description": "Cloud backups owned by authenticated users"
+    }
+  }
+}

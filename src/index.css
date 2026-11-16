@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --ac: #0f766e;
+    --ac-hover: #115e59;
+    --ac-soft: rgba(15, 118, 110, 0.12);
+    --ac-glow: rgba(15, 118, 110, 0.45);
+    --r: 16px;
+    --ir: 10px;
+    --fs: 15px;
+    --cp: 16px;
+    --ff: "Noto Sans Arabic", "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --ff-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--ff);
+    font-size: var(--fs);
+    transition: background-color 0.25s ease, color 0.25s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-mono {
+    font-family: var(--ff-mono);
+  }
+
+  /* Sleek modern scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.35);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.6);
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* =========================================
+   DYNAMIC ACCENT COLOR OVERRIDES
+   Ensures changes to settings.ac immediately reflect everywhere
+   ========================================= */
+.bg-teal-500,
+.bg-teal-600,
+.bg-teal-700,
+button.bg-teal-600,
+button.bg-teal-500,
+a.bg-teal-600,
+a.bg-teal-500,
+[class*="bg-teal-600"],
+[class*="bg-teal-500"] {
+  background-color: var(--ac) !important;
+}
+
+.hover\:bg-teal-600:hover,
+.hover\:bg-teal-700:hover,
+.hover\:bg-teal-800:hover,
+button.hover\:bg-teal-700:hover,
+button.hover\:bg-teal-600:hover,
+[class*="hover:bg-teal-700"]:hover,
+[class*="hover:bg-teal-600"]:hover {
+  background-color: var(--ac-hover) !important;
+}
+
+.text-teal-300,
+.text-teal-400,
+.text-teal-500,
+.text-teal-600,
+.text-teal-700,
+.text-teal-800,
+.dark .dark\:text-teal-200,
+.dark .dark\:text-teal-300,
+.dark .dark\:text-teal-400,
+.dark .dark\:text-teal-500,
+[class*="text-teal-300"],
+[class*="text-teal-400"],
+[class*="text-teal-500"],
+[class*="text-teal-600"],
+[class*="text-teal-700"] {
+  color: var(--ac) !important;
+}
+
+.border-teal-200,
+.border-teal-300,
+.border-teal-400,
+.border-teal-500,
+.border-teal-600,
+.border-teal-700,
+.border-teal-800,
+.dark .dark\:border-teal-700,
+.dark .dark\:border-teal-800,
+[class*="border-teal-200"],
+[class*="border-teal-300"],
+[class*="border-teal-400"],
+[class*="border-teal-500"],
+[class*="border-teal-600"] {
+  border-color: var(--ac) !important;
+}
+
+.bg-teal-50,
+.bg-teal-50\/70,
+.bg-teal-100,
+.dark .dark\:bg-teal-950,
+.dark .dark\:bg-teal-950\/40,
+.dark .dark\:bg-teal-950\/50,
+.dark .dark\:bg-teal-950\/60,
+.dark .dark\:bg-teal-950\/80,
+.dark .dark\:bg-teal-900,
+[class*="bg-teal-50"],
+[class*="dark:bg-teal-950"] {
+  background-color: var(--ac-soft) !important;
+}
+
+.ring-teal-400,
+.ring-teal-500,
+.ring-teal-600,
+.focus\:ring-teal-500:focus,
+.focus\:ring-teal-400:focus {
+  --tw-ring-color: var(--ac) !important;
+}
+
+/* Gradients that use teal */
+.from-teal-500,
+.from-teal-600 {
+  --tw-gradient-from: var(--ac) var(--tw-gradient-from-position, ) !important;
+}
+
+.to-teal-500,
+.to-teal-600,
+.to-emerald-600 {
+  --tw-gradient-to: var(--ac-hover) var(--tw-gradient-to-position, ) !important;
+}
+
+/* =========================================
+   DARK NEON COLOR THEME (.theme-neon)
+   Futuristic, glowing, high-contrast cyberpunk dark mode
+   ========================================= */
+.theme-neon,
+[data-theme="neon"] {
+  color-scheme: dark;
+}
+
+.theme-neon body,
+[data-theme="neon"] body,
+html.theme-neon,
+html[data-theme="neon"] {
+  background-color: #060913 !important;
+  color: #f1f5f9 !important;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(var(--ac-rgb, 6, 182, 212), 0.12), transparent 45%),
+    radial-gradient(ellipse at 80% 100%, rgba(var(--ac-rgb, 168, 85, 247), 0.08), transparent 45%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Cards & containers in Dark Neon */
+.theme-neon .bg-white,
+.theme-neon .dark\:bg-slate-800,
+.theme-neon .dark\:bg-slate-900,
+.theme-neon .bg-slate-50,
+[data-theme="neon"] .bg-white,
+[data-theme="neon"] .dark\:bg-slate-800,
+[data-theme="neon"] .dark\:bg-slate-900 {
+  background-color: #0c1222 !important;
+  border-color: rgba(var(--ac-rgb, 6, 182, 212), 0.28) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.45), 0 0 1px rgba(var(--ac-rgb, 6, 182, 212), 0.3) !important;
+}
+
+/* Subtle glowing borders for neon elements */
+.theme-neon .border-slate-200,
+.theme-neon .border-slate-100,
+.theme-neon .dark\:border-slate-700,
+.theme-neon .dark\:border-slate-800,
+[data-theme="neon"] .border-slate-200,
+[data-theme="neon"] .dark\:border-slate-700 {
+  border-color: rgba(var(--ac-rgb, 6, 182, 212), 0.22) !important;
+}
+
+/* Inputs in Dark Neon */
+.theme-neon input,
+.theme-neon select,
+.theme-neon textarea,
+[data-theme="neon"] input,
+[data-theme="neon"] select,
+[data-theme="neon"] textarea {
+  background-color: #070c18 !important;
+  border-color: rgba(var(--ac-rgb, 6, 182, 212), 0.35) !important;
+  color: #f8fafc !important;
+}
+
+.theme-neon input:focus,
+.theme-neon select:focus,
+.theme-neon textarea:focus,
+[data-theme="neon"] input:focus {
+  border-color: var(--ac) !important;
+  box-shadow: 0 0 12px var(--ac-glow, rgba(6, 182, 212, 0.45)) !important;
+}
+
+/* Neon buttons & glowing badges */
+.theme-neon .bg-teal-600,
+.theme-neon button.bg-teal-600,
+[data-theme="neon"] .bg-teal-600,
+[data-theme="neon"] button.bg-teal-600 {
+  box-shadow: 0 0 15px var(--ac-glow, rgba(6, 182, 212, 0.5)), 0 0 2px var(--ac) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Neon subtle headers */
+.theme-neon h1,
+.theme-neon h2,
+.theme-neon h3,
+[data-theme="neon"] h1,
+[data-theme="neon"] h2,
+[data-theme="neon"] h3 {
+  text-shadow: 0 0 12px rgba(var(--ac-rgb, 6, 182, 212), 0.35);
+}
+
+/* Dark Neon Navigation & Header */
+.theme-neon nav,
+[data-theme="neon"] nav {
+  background-color: rgba(9, 14, 28, 0.95) !important;
+  border-top-color: rgba(var(--ac-rgb, 6, 182, 212), 0.35) !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.7) !important;
+}
+
+.theme-neon header,
+[data-theme="neon"] header {
+  background: linear-gradient(135deg, #090e1e 0%, #0d152d 50%, #080d1a 100%) !important;
+  border: 1px solid rgba(var(--ac-rgb, 6, 182, 212), 0.45) !important;
+  box-shadow: 0 0 25px rgba(var(--ac-rgb, 6, 182, 212), 0.25), 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+}
+
+.theme-neon .min-h-screen,
+[data-theme="neon"] .min-h-screen {
+  background-color: transparent !important;
+}
+
+/* =========================================
+   OLED PURE BLACK THEME (.theme-oled)
+   Pure #000000 black for AMOLED screens, zero pixel illumination & power saving
+   ========================================= */
+.theme-oled,
+[data-theme="oled"] {
+  color-scheme: dark;
+}
+
+.theme-oled body,
+[data-theme="oled"] body,
+html.theme-oled,
+html[data-theme="oled"] {
+  background-color: #000000 !important;
+  color: #f8fafc !important;
+}
+
+.theme-oled .bg-white,
+.theme-oled .dark\:bg-slate-800,
+.theme-oled .dark\:bg-slate-900,
+.theme-oled .dark\:bg-slate-850,
+.theme-oled .bg-slate-50,
+[data-theme="oled"] .bg-white,
+[data-theme="oled"] .dark\:bg-slate-800,
+[data-theme="oled"] .dark\:bg-slate-900,
+[data-theme="oled"] .dark\:bg-slate-850 {
+  background-color: #000000 !important;
+  border-color: #1a1a1a !important;
+}
+
+.theme-oled .border-slate-200,
+.theme-oled .border-slate-100,
+.theme-oled .dark\:border-slate-700,
+.theme-oled .dark\:border-slate-800,
+[data-theme="oled"] .border-slate-200,
+[data-theme="oled"] .dark\:border-slate-700,
+[data-theme="oled"] .dark\:border-slate-800 {
+  border-color: #1e1e1e !important;
+}
+
+.theme-oled nav,
+[data-theme="oled"] nav {
+  background-color: rgba(0, 0, 0, 0.98) !important;
+  border-top-color: #1c1c1c !important;
+}
+
+.theme-oled header,
+[data-theme="oled"] header {
+  background: #000000 !important;
+  border-color: #1c1c1c !important;
+}
+
+.theme-oled input,
+.theme-oled select,
+.theme-oled textarea,
+[data-theme="oled"] input,
+[data-theme="oled"] select,
+[data-theme="oled"] textarea {
+  background-color: #050505 !important;
+  border-color: #262626 !important;
+  color: #f8fafc !important;
+}
+
+.theme-oled .min-h-screen,
+[data-theme="oled"] .min-h-screen {
+  background-color: #000000 !important;
+}
+
+@media print {
+  nav, header, .np, button, input[type="range"], .print\:hidden {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  #printable-financial-statement {
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+

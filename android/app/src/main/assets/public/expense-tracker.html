@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>ڕاپۆرت و سیستەمی تەواوی دارایی - Expenses & Wealth Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Noto Sans Arabic', 'Inter', system-ui, -apple-system, sans-serif; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; color: black !important; padding: 0 !important; }
+      .print-shadow-none { box-shadow: none !important; border-color: #cbd5e1 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen p-3 sm:p-6 transition-colors duration-200">
+  <div class="max-w-5xl mx-auto space-y-5">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-teal-800 via-teal-900 to-emerald-900 rounded-3xl p-5 sm:p-6 text-white shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-xs flex items-center justify-center text-teal-200 text-2xl font-bold">
+          💰
+        </div>
+        <div>
+          <h1 class="text-lg sm:text-xl font-extrabold tracking-tight">سیستەمی بەڕێوەبردنی دارایی و خەرجییەکان</h1>
+          <p class="text-xs text-teal-200">فایلی تەواوی پاشەکەوت، خەرجی، سەروەت، زێڕ و قەرزەکانت</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 self-end sm:self-auto no-print">
+        <button onclick="window.print()" class="px-3.5 py-2 bg-white/15 hover:bg-white/25 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
+          🖨️ <span>چاپکردن (Print)</span>
+        </button>
+        <button id="themeToggleBtn" onclick="toggleDarkMode()" class="p-2 bg-white/15 hover:bg-white/25 text-white rounded-xl text-xs transition cursor-pointer" title="گۆڕینی شێوازی ڕووناک / تاریک">
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Sub-Tabs in Standalone -->
+    <nav class="flex bg-slate-200 dark:bg-slate-800 p-1 rounded-2xl no-print text-xs font-bold gap-1 overflow-x-auto">
+      <button onclick="switchTab('summary')" id="tab-summary" class="flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer bg-white dark:bg-slate-700 text-teal-700 dark:text-teal-300 shadow-xs">
+        📊 پوختەی دارایی
+      </button>
+      <button onclick="switchTab('expenses')" id="tab-expenses" class="flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer text-slate-600 dark:text-slate-400">
+        💸 خەرجییەکان
+      </button>
+      <button onclick="switchTab('savings')" id="tab-savings" class="flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer text-slate-600 dark:text-slate-400">
+        🎯 پاشەکەوت و ئامانجەکان
+      </button>
+      <button onclick="switchTab('wealth')" id="tab-wealth" class="flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer text-slate-600 dark:text-slate-400">
+        💎 سەروەت و زێڕ
+      </button>
+      <button onclick="switchTab('raw')" id="tab-raw" class="flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer text-slate-600 dark:text-slate-400">
+        💻 کۆدی داتاکان (JSON)
+      </button>
+    </nav>
+
+    <!-- Content Sections -->
+    <main id="tab-content" class="space-y-4">
+
+      <!-- SECTION 1: SUMMARY -->
+      <section id="sec-summary" class="space-y-4">
+        <!-- Key Metrics Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-2xs">
+            <span class="text-[11px] text-slate-500 block mb-1">کۆی داهات (داهاتووی مانگ)</span>
+            <b id="summary-income" class="text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400 font-mono">0 IQD</b>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-2xs">
+            <span class="text-[11px] text-slate-500 block mb-1">کۆی خەرجییەکان</span>
+            <b id="summary-expenses" class="text-base sm:text-lg font-bold text-red-500 dark:text-red-400 font-mono">0 IQD</b>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-2xs">
+            <span class="text-[11px] text-slate-500 block mb-1">کۆی پاشەکەوت</span>
+            <b id="summary-savings" class="text-base sm:text-lg font-bold text-teal-600 dark:text-teal-400 font-mono">0 IQD</b>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-2xs">
+            <span class="text-[11px] text-slate-500 block mb-1">بڕی ماوە (باڵانس)</span>
+            <b id="summary-balance" class="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400 font-mono">0 IQD</b>
+          </div>
+        </div>
+
+        <!-- Net Worth Card -->
+        <div class="bg-gradient-to-br from-slate-900 to-teal-950 text-white rounded-2xl p-5 shadow-sm space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs text-teal-300 font-bold uppercase tracking-wider">کۆی گشتی سەروەت و سامان (Estimated Net Worth)</span>
+            <span class="text-xs bg-white/10 px-2.5 py-0.5 rounded-full font-bold">💎 سامان و نەختینە</span>
+          </div>
+          <div class="text-2xl sm:text-3xl font-black font-mono" id="summary-networth">
+            0 IQD
+          </div>
+          <p class="text-[11px] text-teal-200/80">پوختەی هەموو پاشەکەوتەکان، زێڕ، نەختینەی بەردەست و قەرزەکانی دراوە.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 2: EXPENSES -->
+      <section id="sec-expenses" class="hidden space-y-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-base font-bold flex items-center gap-2">
+              <span>لیستی خەرجییەکان</span>
+            </h2>
+            <span class="text-xs text-slate-400" id="expenses-count">0 خەرجی تۆمارکراوە</span>
+          </div>
+
+          <div id="expenses-table-container" class="overflow-x-auto">
+            <table class="w-full text-xs text-start">
+              <thead>
+                <tr class="border-b border-slate-200 dark:border-slate-700 text-slate-400 pb-2">
+                  <th class="py-2 text-start">بەروار</th>
+                  <th class="py-2 text-start">پۆل</th>
+                  <th class="py-2 text-start">بڕی پارە</th>
+                  <th class="py-2 text-start">دراو</th>
+                  <th class="py-2 text-start">تێبینی</th>
+                </tr>
+              </thead>
+              <tbody id="expenses-tbody" class="divide-y divide-slate-100 dark:divide-slate-800">
+                <tr>
+                  <td colspan="5" class="py-4 text-center text-slate-400">هیچ خەرجییەک نەدۆزرایەوە</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: SAVINGS -->
+      <section id="sec-savings" class="hidden space-y-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-xs space-y-4">
+          <h2 class="text-base font-bold flex items-center gap-2">
+            <span>🎯 ئامانجەکانی پاشەکەوت</span>
+          </h2>
+          <div id="goals-list-container" class="space-y-3">
+            <p class="text-xs text-slate-400 text-center py-4">هیچ ئامانجێکی پاشەکەوت نەدۆزرایەوە.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: WEALTH & GOLD -->
+      <section id="sec-wealth" class="hidden space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Gold -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
+            <h3 class="text-sm font-bold flex items-center gap-2">
+              <span>🪙 زێڕ و کانزا بەنرخەکان</span>
+            </h3>
+            <div id="gold-list-container" class="space-y-2 text-xs">
+              <p class="text-slate-400 text-center py-3">هیچ زێڕێک تۆمار نەکراوە.</p>
+            </div>
+          </div>
+
+          <!-- Debts -->
+          <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
+            <h3 class="text-sm font-bold flex items-center gap-2">
+              <span>🤝 قەرزەکان (دراو و وەرگیراو)</span>
+            </h3>
+            <div id="debts-list-container" class="space-y-2 text-xs">
+              <p class="text-slate-400 text-center py-3">هیچ قەرزێک تۆمار نەکراوە.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: RAW JSON -->
+      <section id="sec-raw" class="hidden space-y-3">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 border border-slate-200 dark:border-slate-700 shadow-xs space-y-3">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold">کۆدی خاوی دارایی (JSON Data)</h3>
+            <button onclick="copyRawJson()" class="px-3 py-1 bg-teal-600 hover:bg-teal-700 text-white rounded-lg text-xs font-bold transition cursor-pointer">
+              کۆپیکردنی کۆد
+            </button>
+          </div>
+          <pre id="raw-json-viewer" class="w-full p-3 bg-slate-900 text-emerald-400 font-mono text-[11px] rounded-xl overflow-x-auto max-h-96" dir="ltr"></pre>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-xs text-slate-400 pt-4 border-t border-slate-200 dark:border-slate-800">
+      داهاتوو - فایلی هەناردەکراوی خۆبژێوی HTML • دەکرێت بەبێ ئینتەرنێت و لەسەر هەر وێبگەڕێک بکرێتەوە.
+    </footer>
+  </div>
+
+  <script>
+    // Embedded initial sample/placeholder data (can load from localStorage or injected)
+    let financialData = {
+      app: "ExpenseMaster",
+      y: "2026",
+      incomeTotal: 0,
+      expensesTotal: 0,
+      savingsTotal: 0,
+      goals: [],
+      gold: [],
+      debts: [],
+      expenses: []
+    };
+
+    // Load from browser localStorage if available
+    try {
+      const storedGoals = localStorage.getItem('b_goals');
+      if (storedGoals) {
+        const parsed = JSON.parse(storedGoals);
+        financialData.goals = parsed.list || parsed || [];
+      }
+      const storedGold = localStorage.getItem('b_gold');
+      if (storedGold) {
+        const parsed = JSON.parse(storedGold);
+        financialData.gold = parsed.l || parsed || [];
+      }
+      const storedDebts = localStorage.getItem('b_ppl');
+      if (storedDebts) {
+        const parsed = JSON.parse(storedDebts);
+        financialData.debts = parsed.l || parsed || [];
+      }
+
+      // Scan localStorage for current year month docs
+      const nowStr = new Date().toISOString().slice(0, 7);
+      const currMonthDoc = localStorage.getItem('b_m' + nowStr);
+      if (currMonthDoc) {
+        const mObj = JSON.parse(currMonthDoc);
+        if (mObj.tx) financialData.expenses = mObj.tx;
+        if (mObj.inc) financialData.incomeTotal = (mObj.inc || []).reduce((a, b) => a + Number(b), 0) + (Number(mObj.oi) || 0);
+        if (mObj.sv) financialData.savingsTotal = (mObj.sv || []).reduce((a, b) => a + (Number(b.a) || 0), 0);
+      }
+    } catch (e) {
+      console.warn("Storage access:", e);
+    }
+
+    function formatIQD(num) {
+      return Number(num || 0).toLocaleString('en-US');
+    }
+
+    function renderDashboard() {
+      // Metrics
+      const totalExp = (financialData.expenses || []).reduce((a, t) => a + (Number(t.a) || 0), 0);
+      const goalsSavedTotal = (financialData.goals || []).reduce((a, g) => a + (Number(g.s) || 0), 0);
+      const netWorth = financialData.incomeTotal + goalsSavedTotal - totalExp;
+
+      document.getElementById('summary-income').innerText = formatIQD(financialData.incomeTotal) + ' IQD';
+      document.getElementById('summary-expenses').innerText = formatIQD(totalExp) + ' IQD';
+      document.getElementById('summary-savings').innerText = formatIQD(goalsSavedTotal) + ' IQD';
+      document.getElementById('summary-balance').innerText = formatIQD(financialData.incomeTotal - totalExp) + ' IQD';
+      document.getElementById('summary-networth').innerText = formatIQD(Math.max(0, netWorth)) + ' IQD';
+
+      // Expenses
+      const tbody = document.getElementById('expenses-tbody');
+      if (financialData.expenses && financialData.expenses.length > 0) {
+        document.getElementById('expenses-count').innerText = financialData.expenses.length + ' خەرجی';
+        tbody.innerHTML = financialData.expenses.map(t => `
+          <tr class="hover:bg-slate-50 dark:hover:bg-slate-750">
+            <td class="py-2 font-mono">${t.d || '—'}</td>
+            <td class="py-2 font-bold">${t.c !== undefined ? 'پۆل ' + t.c : 'خەرجی'}</td>
+            <td class="py-2 font-mono font-bold text-red-500">${formatIQD(t.a)}</td>
+            <td class="py-2">${t.cu === 'U' ? 'USD' : 'IQD'}</td>
+            <td class="py-2 text-slate-400">${t.n || '—'}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Goals
+      const goalsCont = document.getElementById('goals-list-container');
+      if (financialData.goals && financialData.goals.length > 0) {
+        goalsCont.innerHTML = financialData.goals.map(g => {
+          const s = Number(g.s) || 0;
+          const t = Number(g.t) || 1;
+          const pct = Math.min(100, Math.round((s / t) * 100));
+          return `
+            <div class="p-3 bg-slate-50 dark:bg-slate-750 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+              <div class="flex items-center justify-between">
+                <b class="font-bold text-slate-800 dark:text-slate-100">${g.n}</b>
+                <span class="text-xs font-mono font-bold text-teal-600">%${pct}</span>
+              </div>
+              <div class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                <div class="h-full bg-teal-500 rounded-full" style="width: ${pct}%"></div>
+              </div>
+              <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+                <span>پاشەکەوتکراو: ${formatIQD(s)} IQD</span>
+                <span>ئامانج: ${formatIQD(t)} IQD</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Raw JSON
+      document.getElementById('raw-json-viewer').innerText = JSON.stringify(financialData, null, 2);
+    }
+
+    function switchTab(tabId) {
+      ['summary', 'expenses', 'savings', 'wealth', 'raw'].forEach(t => {
+        document.getElementById('sec-' + t).classList.add('hidden');
+        document.getElementById('tab-' + t).className = 'flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer text-slate-600 dark:text-slate-400';
+      });
+      document.getElementById('sec-' + tabId).classList.remove('hidden');
+      document.getElementById('tab-' + tabId).className = 'flex-1 py-2 px-3 rounded-xl transition text-center cursor-pointer bg-white dark:bg-slate-700 text-teal-700 dark:text-teal-300 shadow-xs font-bold';
+    }
+
+    function copyRawJson() {
+      navigator.clipboard.writeText(JSON.stringify(financialData, null, 2));
+      alert('کۆدی JSON کۆپیکرا!');
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    window.addEventListener('DOMContentLoaded', renderDashboard);
+  </script>
+</body>
+</html>
