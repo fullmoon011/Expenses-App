@@ -99,31 +99,31 @@ export const FinancialPDFReportModal: React.FC<FinancialPDFReportModalProps> = (
   // Generate plain text report
   const generateTextReport = () => {
     let text = `=====================================\n`;
-    text += `📑 ${t('pdf_official_doc')}: ${monthLabel}\n`;
+    text += `${t('pdf_official_doc')}: ${monthLabel}\n`;
     text += `${t('wsm')}: ${activeWsTitle}\n`;
     text += `${t('pdf_issue_date')}: ${nowFormatted}\n`;
     text += `${t('pdf_fx_rate')}: $100 = ${fmt(defaultRate * 100)} IQD\n`;
     text += `=====================================\n\n`;
 
-    text += `📊 ${t('pdf_summary_header')}:\n`;
+    text += `[ ${t('pdf_summary_header')} ]\n`;
     text += `• ${t('inc')}: ${isLocked ? '••••••' : fmt(totals.inc)} IQD\n`;
     text += `• ${t('exp')}: ${fmt(totals.exp)} IQD\n`;
     text += `• ${t('ns')}: ${fmt(totals.sv)} IQD\n`;
     text += `• ${t('rem')}: ${isLocked ? '••••••' : fmt(totals.rem)} IQD\n`;
     text += `• ${t('rate')}: ${isLocked ? '••%' : `${Math.round(totals.savingsRate * 100)}%`}\n\n`;
 
-    text += `⚖️ ${t('pdf_rule_503020_title')}:\n`;
+    text += `[ ${t('pdf_rule_503020_title')} ]\n`;
     text += `• ${t('pdf_rule_needs')}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)\n`;
     text += `• ${t('pdf_rule_wants')}: ${fmt(ruleBreakdown.wants)} IQD (${ruleBreakdown.wantsPct}%)\n`;
     text += `• ${t('pdf_rule_savings')}: ${fmt(ruleBreakdown.savings)} IQD (${ruleBreakdown.savingsPct}%)\n\n`;
 
-    text += `🏷️ ${t('pdf_cat_details')}:\n`;
+    text += `[ ${t('pdf_cat_details')} ]\n`;
     categoryRows.slice(0, 10).forEach(c => {
       text += `• ${getCategoryName(c.cat, langIndex)}: ${fmt(c.spent)} IQD (${c.pctOfExp}%)\n`;
     });
 
     if (includeTransactions && (doc.tx || []).length > 0) {
-      text += `\n📝 ${t('pdf_transactions_title')} (${(doc.tx || []).length}):\n`;
+      text += `\n[ ${t('pdf_transactions_title')} (${(doc.tx || []).length}) ]\n`;
       (doc.tx || []).forEach(tx => {
         const cName = getCategoryName(tx.c, langIndex) || t('exp');
         const pName = members[tx.w]?.n || '';

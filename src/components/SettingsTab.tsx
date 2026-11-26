@@ -34,7 +34,9 @@ import {
   Cloud,
   Code2,
   FileCode,
-  CheckCheck
+  CheckCheck,
+  X,
+  Lightbulb
 } from 'lucide-react';
 import { NamesConfig, SettingsConfig, MonthDoc } from '../types';
 import { LANGUAGES } from '../constants/translations';
@@ -803,7 +805,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                       <span className={`w-2.5 h-2.5 rounded-full ${notifPermission === 'granted' ? 'bg-emerald-500' : 'bg-amber-500 animate-pulse'}`} />
                       <span>
                         {notifPermission === 'granted'
-                          ? 'ئاگادارییەکانی مۆبایل و براوسەر ڕێگەپێدراون 🟢'
+                          ? 'ئاگادارییەکانی مۆبایل و براوسەر ڕێگەپێدراون'
                           : 'ڕێگەپێدانی ئاگاداری مۆبایل پێویستە'}
                       </span>
                     </span>
@@ -831,7 +833,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                       {testNotifSuccess ? (
                         <>
                           <Check className="w-3.5 h-3.5 text-emerald-500" />
-                          <span>نێردرا! ✓</span>
+                          <span>نێردرا!</span>
                         </>
                       ) : (
                         <>
@@ -1145,11 +1147,12 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
               <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
                 شێوازی ڕووکار:
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                 {[
                   { id: 'light', label: 'ڕووناک (Light)', icon: Sun },
                   { id: 'dark', label: 'تاریک (Dark)', icon: Moon },
-                  { id: 'neon', label: 'نیۆن (Neon Cyber)', icon: Sparkles },
+                  { id: 'oled', label: 'ڕەشی تەواو (OLED)', icon: Smartphone },
+                  { id: 'neon', label: 'نیۆن (Neon)', icon: Sparkles },
                   { id: 'auto', label: 'خۆکار (System)', icon: Laptop }
                 ].map(({ id, label, icon: Icon }) => {
                   const isSelected = (settings.th || 'auto') === id;
@@ -1158,26 +1161,69 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                       key={id}
                       type="button"
                       onClick={() => {
+                        haptics.selection();
                         if (id === 'neon' && (!settings.ac || settings.ac === '#0f766e')) {
                           onUpdateSettings({ th: 'neon', ac: '#06b6d4' });
                         } else {
                           onUpdateSettings({ th: id as any });
                         }
                       }}
-                      className={`py-2.5 px-3 rounded-xl text-xs font-bold border transition flex items-center justify-center gap-2 cursor-pointer ${
+                      className={`py-2.5 px-2.5 rounded-xl text-[11px] sm:text-xs font-bold border transition flex items-center justify-center gap-1.5 cursor-pointer ${
                         isSelected
                           ? id === 'neon'
                             ? 'bg-cyan-500/20 text-cyan-300 border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.45)]'
+                            : id === 'oled'
+                            ? 'bg-black text-white border-emerald-500 shadow-md ring-1 ring-emerald-500/50'
                             : 'bg-teal-600 text-white border-teal-600 shadow-xs'
                           : 'bg-slate-50 dark:bg-slate-900/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
                       }`}
                     >
-                      <Icon className="w-4 h-4" />
-                      <span>{label}</span>
+                      <Icon className="w-4 h-4 shrink-0" />
+                      <span className="truncate">{label}</span>
                     </button>
                   );
                 })}
               </div>
+              <p className="text-[10px] text-slate-400 mt-1.5">
+                دۆخی (OLED) ڕەشی تەواوە (#000000) بۆ مۆبایلە شاشە AMOLEDەکان، باتری دەپارێزێت و چاو ئارام دەکات.
+              </p>
+            </div>
+
+            {/* Mobile Haptic Feedback Toggle */}
+            <div className="pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <Smartphone className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-100 block">
+                    لەرینەوەی پەنجە (Haptic Feedback)
+                  </span>
+                  <span className="text-[10px] text-slate-400 block">
+                    لەرینەوەیەکی نەرم لە کاتی تۆمارکردنی خەرجی و گۆڕینی بەشەکان
+                  </span>
+                </div>
+              </div>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={settings.haptics !== false}
+                onClick={() => {
+                  const next = settings.haptics === false;
+                  haptics.setEnabled(next);
+                  if (next) haptics.medium();
+                  onUpdateSettings({ haptics: next });
+                }}
+                className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
+                  settings.haptics !== false ? 'bg-teal-600' : 'bg-slate-300 dark:bg-slate-700'
+                }`}
+              >
+                <span
+                  className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
+                    settings.haptics !== false ? 'rtl:-translate-x-5 ltr:translate-x-5' : 'translate-x-0'
+                  }`}
+                />
+              </button>
             </div>
 
             {/* Accent Color Palette */}
@@ -1193,7 +1239,10 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                     <button
                       key={color}
                       type="button"
-                      onClick={() => onUpdateSettings({ ac: color })}
+                      onClick={() => {
+                        haptics.selection();
+                        onUpdateSettings({ ac: color });
+                      }}
                       style={{ backgroundColor: color }}
                       className={`w-8 h-8 rounded-full border-2 transition cursor-pointer ${
                         isCurrent
@@ -1638,8 +1687,9 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                     />
                   </div>
 
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                    💡 ئەم کۆدە هەموو مووچە، خەرجییەکان، ئامانجەکانی پاشەکەوت، زێڕ، و قەرزەکانت لەخۆدەگرێت. دەتوانیت لە خوارەوە یاخود لە هەر ئامێرێکی تر پەیستی بکەیتەوە بۆ دەستبەجێ بەردەوامبوون.
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 flex items-start gap-1.5">
+                    <Lightbulb className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
+                    <span>ئەم کۆدە هەموو مووچە، خەرجییەکان، ئامانجەکانی پاشەکەوت، زێڕ، و قەرزەکانت لەخۆدەگرێت. دەتوانیت لە خوارەوە یاخود لە هەر ئامێرێکی تر پەیستی بکەیتەوە بۆ دەستبەجێ بەردەوامبوون.</span>
                   </p>
                 </div>
               )}
@@ -1747,7 +1797,7 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
                 onClick={() => setShowFabMenu(false)}
                 className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-0.5 rounded cursor-pointer"
               >
-                ✕
+                <X className="w-3.5 h-3.5" />
               </button>
             </div>
             <button
@@ -1826,7 +1876,16 @@ export const SettingsTab: React.FC<SettingsTabProps> = ({
             title="Export All Data (هەناردەکردنی هەموو داتاکان)"
           >
             <Download className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:-translate-y-0.5 ${exportedSuccess ? 'animate-bounce text-emerald-200' : ''}`} />
-            <span>{exportedSuccess ? 'داگیرا ✓' : 'Export All Data'}</span>
+            <span className="inline-flex items-center gap-1">
+              {exportedSuccess ? (
+                <>
+                  <span>داگیرا</span>
+                  <Check className="w-3.5 h-3.5" />
+                </>
+              ) : (
+                'Export All Data'
+              )}
+            </span>
           </button>
 
           <div className="h-5 w-px bg-white/20" />

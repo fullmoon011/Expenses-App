@@ -173,8 +173,8 @@ export function computeSmartNotifications(
           list.push({
             id: `cat_budget_${idx}_${Math.floor(pct / 10) * 10}`,
             title: isOver
-              ? `🚨 تێپەڕاندنی بودجە: ${catName}`
-              : `⚠️ نزیکبوونەوە لە سنووری بودجە: ${catName}`,
+              ? `تێپەڕاندنی بودجە: ${catName}`
+              : `نزیکبوونەوە لە سنووری بودجە: ${catName}`,
             body: isOver
               ? `خەرجی ئەم پۆلە (${fmt(spent)} د.ع) لە سەرووی بودجەی دیاریکراوە (${fmt(b)} د.ع). ڕێژەی بەکارهێنان: %${Math.round(pct)}.`
               : `گەیشتووەتە %${Math.round(pct)}ی بودجە (${fmt(spent)} لە ${fmt(b)} د.ع). تەنها ${fmt(remaining)} د.ع لە سنوورەکە ماوە.`,
@@ -200,7 +200,7 @@ export function computeSmartNotifications(
         if (item.status === 'pending' && nowMs - item.createdAt >= 24 * 60 * 60 * 1000) {
           list.push({
             id: `impulse_${item.id}`,
-            title: `٢٤ کاتژمێر تەواو بوو: ${item.n} ⏳`,
+            title: `٢٤ کاتژمێر تەواو بوو: ${item.n}`,
             body: `ئێستا دەتوانیت بە ئارامی بڕیار بدەیت: ئایا هێشتا پێویستت پێیەتی یان پاشەکەوتی دەکەیت؟`,
             type: 'impulse',
             urgent: true
@@ -217,7 +217,7 @@ export function computeSmartNotifications(
   if (hour >= 20 && todayTxs.length === 0) {
     list.push({
       id: `evening_${now.toISOString().slice(0, 10)}`,
-      title: 'پێداچوونەوەی ئێواران 🌙',
+      title: 'پێداچوونەوەی ئێواران',
       body: 'ئەمڕۆ هیچ خەرجییەکت تۆمار نەکردووە. ئەگەر شتێکت کڕیوە، بە ١ کلیک تۆماری بکە.',
       type: 'evening'
     });
@@ -272,8 +272,8 @@ export function checkAndDispatchBudgetAlert(
   const remaining = Math.max(0, budget - totalSpent);
 
   const title = isOver
-    ? `🚨 تێپەڕاندنی بودجە: ${catName}`
-    : `⚠️ نزیکبوونەوە لە سنووری بودجە: ${catName}`;
+    ? `تێپەڕاندنی بودجە: ${catName}`
+    : `نزیکبوونەوە لە سنووری بودجە: ${catName}`;
 
   const body = isOver
     ? `خەرجی پۆلی «${catName}» بە تەواوی بودجەکەی تێپەڕاند! (${fmt(totalSpent)} لە ${fmt(budget)} د.ع - %${Math.round(pct)}).`
@@ -326,7 +326,7 @@ export async function sendTestBudgetNotification(catName = 'خۆراک و مار
   const granted = await requestBrowserNotifications();
   if (granted) {
     sendBrowserNotification(
-      `⚠️ تێستی ئاگاداری: نزیکبوونەوە لە سنووری ${catName}`,
+      `تێستی ئاگاداری: نزیکبوونەوە لە سنووری ${catName}`,
       `ئاگاداری مۆبایل و براوسەر بۆ سنووری بودجەی پۆلەکان بە سەرکەوتوویی کار دەکات! (%٨٥ خەرجکراوە).`
     );
     playAlertChime();

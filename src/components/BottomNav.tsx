@@ -9,6 +9,7 @@ import {
   LayoutGrid,
   Settings
 } from 'lucide-react';
+import { haptics } from '../utils/haptics';
 
 export type TabKey =
   | 'expenses'
@@ -48,6 +49,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
 
   const handleCenterClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    haptics.medium();
     if (!isExpenseActive) {
       onChangeTab('expenses');
     } else if (onOpenAddExpense) {
@@ -57,6 +59,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({
 
   const handleQuickAddClick = (e: React.MouseEvent) => {
     e.stopPropagation();
+    haptics.medium();
     if (onOpenAddExpense) {
       onOpenAddExpense();
     } else {
@@ -73,7 +76,10 @@ export const BottomNav: React.FC<BottomNavProps> = ({
       <button
         key={tab.key}
         type="button"
-        onClick={() => onChangeTab(tab.key)}
+        onClick={() => {
+          haptics.light();
+          onChangeTab(tab.key);
+        }}
         className={`flex-1 min-w-[50px] max-w-[80px] py-1.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-0.5 text-[11px] sm:text-xs font-semibold transition-all cursor-pointer ${
           isActive
             ? 'text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 dark:bg-emerald-500/20 scale-102 shadow-2xs'

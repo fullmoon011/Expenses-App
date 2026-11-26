@@ -591,7 +591,7 @@ export const ReportsTab: React.FC<ReportsTabProps> = ({
           }`}
         >
           <Calendar className="w-4 h-4 shrink-0 text-emerald-400" />
-          <span className="truncate">ڕۆژژمێری خەرجی 📅</span>
+          <span className="truncate">ڕۆژژمێری خەرجی</span>
         </button>
       </div>
 

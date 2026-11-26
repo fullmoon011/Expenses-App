@@ -673,8 +673,23 @@ export const ReportsChartsSection: React.FC<ReportsChartsSectionProps> = ({
                               : `زیادەڕۆیی: ${fmt(Math.abs(item.variance))} IQD`
                             : 'بودجە دیاری نەکراوە'}
                         </span>
-                        <span className="font-bold">
-                          {isOver ? '⚠️ بەزێنراو' : isNear ? '⚡ ئاگاداری' : '✓ ئاسایی'}
+                        <span className="font-bold inline-flex items-center gap-1">
+                          {isOver ? (
+                            <>
+                              <AlertTriangle className="w-3 h-3 text-rose-500" />
+                              <span>بەزێنراو</span>
+                            </>
+                          ) : isNear ? (
+                            <>
+                              <Zap className="w-3 h-3 text-amber-500" />
+                              <span>ئاگاداری</span>
+                            </>
+                          ) : (
+                            <>
+                              <CheckCircle2 className="w-3 h-3 text-emerald-500" />
+                              <span>ئاسایی</span>
+                            </>
+                          )}
                         </span>
                       </div>
                     </div>

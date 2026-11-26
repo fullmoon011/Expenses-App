@@ -15516,20 +15516,20 @@ var UI_STRINGS = {
 		"Total paid so far"
 	],
 	"dbt_congrats": [
-		"پیرۆزە! هەموو قەرزەکانت داوەتەوە و هیچ قەرزێکت لەسەر نەماوە 🎉",
-		"تهانينا! لقد سددت جميع ديونك بنجاح وأصبحت حراً من الديون 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Pîroz be! Hemû deyn hatin dayîn û tu deyn li ser te nemaye 🎉",
-		"تبریک! تمام بدهی‌های خود را تسویه کرده‌اید 🎉",
-		"Tebrikler! Tüm borçlarınızı başarıyla kapattınız 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉",
-		"Congratulations! You are completely debt-free 🎉"
+		"پیرۆزە! هەموو قەرزەکانت داوەتەوە و هیچ قەرزێکت لەسەر نەماوە",
+		"تهانينا! لقد سددت جميع ديونك بنجاح وأصبحت حراً من الديون",
+		"Congratulations! You are completely debt-free",
+		"Pîroz be! Hemû deyn hatin dayîn û tu deyn li ser te nemaye",
+		"تبریک! تمام بدهی‌های خود را تسویه کرده‌اید",
+		"Tebrikler! Tüm borçlarınızı başarıyla kapattınız",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free",
+		"Congratulations! You are completely debt-free"
 	],
 	"dbt_months_left": [
 		"مانگی ماوە",
@@ -19868,20 +19868,20 @@ var UI_STRINGS = {
 		"月度储蓄目标"
 	],
 	"adv_reached_goal": [
-		"گەیشتووی بە ئامانجەکە! 🎉",
-		"وصلت إلى الهدف بنجاح! 🎉",
-		"Goal reached successfully! 🎉",
-		"Hûn gihîştin armancê! 🎉",
-		"به هدف رسیدید! 🎉",
-		"Hedefe başarıyla ulaştınız! 🎉",
-		"Ziel erfolgreich erreicht! 🎉",
-		"Objectif atteint avec succès ! 🎉",
-		"¡Meta alcanzada con éxito! 🎉",
-		"Цель успешно достигнута! 🎉",
-		"Obiettivo raggiunto con successo! 🎉",
-		"Målet har uppnåtts! 🎉",
-		"Doel succesvol bereikt! 🎉",
-		"已成功达成目标！🎉"
+		"گەیشتووی بە ئامانجەکە!",
+		"وصلت إلى الهدف بنجاح!",
+		"Goal reached successfully!",
+		"Hûn gihîştin armancê!",
+		"به هدف رسیدید!",
+		"Hedefe başarıyla ulaştınız!",
+		"Ziel erfolgreich erreicht!",
+		"Objectif atteint avec succès !",
+		"¡Meta alcanzada con éxito!",
+		"Цель успешно достигнута!",
+		"Obiettivo raggiunto con successo!",
+		"Målet har uppnåtts!",
+		"Doel succesvol bereikt!",
+		"已成功达成目标！"
 	],
 	"adv_keep_pace": [
 		"بەردەوام بە لەسەر ئەم ڕیتمە",
@@ -20252,20 +20252,20 @@ var UI_STRINGS = {
 		"Dahatu • 智能个人与家庭财务管理系统"
 	],
 	"canvas_top_cats_title": [
-		"🔥 زۆرترین پۆلەکانی خەرجی",
-		"🔥 أعلى فئات الإنفاق",
-		"🔥 Top Spending Categories",
-		"🔥 Kategoriyên herî zêde yên lêçûnê",
-		"🔥 بیشترین دسته‌های هزینه",
-		"🔥 En Yüksek Harcama Kategorileri",
-		"🔥 Top-Ausgabenkategorien",
-		"🔥 Principales catégories de dépenses",
-		"🔥 Principales categorías de gasto",
-		"🔥 Топ категорий расходов",
-		"🔥 Categorie di spesa principali",
-		"🔥 Största utgiftskategorierna",
-		"🔥 Belangrijkste uitgavencategorieën",
-		"🔥 支出最高的类别"
+		"زۆرترین پۆلەکانی خەرجی",
+		"أعلى فئات الإنفاق",
+		"Top Spending Categories",
+		"Kategoriyên herî zêde yên lêçûnê",
+		"بیشترین دسته‌های هزینه",
+		"En Yüksek Harcama Kategorileri",
+		"Top-Ausgabenkategorien",
+		"Principales catégories de dépenses",
+		"Principales categorías de gasto",
+		"Топ категорий расходов",
+		"Categorie di spesa principali",
+		"Största utgiftskategorierna",
+		"Belangrijkste uitgavencategorieën",
+		"支出最高的类别"
 	],
 	"fhs_no_expenses_yet": [
 		"هێشتا لەم مانگەدا هیچ خەرجییەک تۆمار نەکراوە بۆ شیکاریکردن.",
@@ -38930,20 +38930,27 @@ var exportStandaloneHTML = async (currentYear, workspaceId, allData) => {
         <h1 class="text-xl font-black">داهاتوو - سیستەمی دارایی و خەرجییەکان (${currentYear})</h1>
         <p class="text-xs text-teal-200">فایلی خۆبژێوی HTML - تەواوی پاشەکەوت و خەرجییەکانت</p>
       </div>
-      <button onclick="window.print()" class="no-print px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold transition">
-        🖨️ چاپکردن
+      <button onclick="window.print()" class="no-print px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>چاپکردن</span>
       </button>
     </header>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="metrics-grid"></div>
 
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-3">
-      <h2 class="text-base font-bold text-teal-800">🎯 ئامانجەکانی پاشەکەوت</h2>
+      <h2 class="text-base font-bold text-teal-800 flex items-center gap-2">
+        <svg class="w-4 h-4 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <span>ئامانجەکانی پاشەکەوت</span>
+      </h2>
       <div id="goals-container" class="space-y-3"></div>
     </div>
 
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-3">
-      <h2 class="text-base font-bold text-slate-800">💸 خەرجییەکانی مانگ</h2>
+      <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+        <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+        <span>خەرجییەکانی مانگ</span>
+      </h2>
       <div class="overflow-x-auto">
         <table class="w-full text-xs text-start">
           <thead>
@@ -87614,7 +87621,7 @@ function computeSmartNotifications(recurring, todayTxs, doc, names, langIndex = 
 				const remaining = Math.max(0, b - spent);
 				list.push({
 					id: `cat_budget_${idx}_${Math.floor(pct / 10) * 10}`,
-					title: isOver ? `🚨 تێپەڕاندنی بودجە: ${catName}` : `⚠️ نزیکبوونەوە لە سنووری بودجە: ${catName}`,
+					title: isOver ? `تێپەڕاندنی بودجە: ${catName}` : `نزیکبوونەوە لە سنووری بودجە: ${catName}`,
 					body: isOver ? `خەرجی ئەم پۆلە (${fmt(spent)} د.ع) لە سەرووی بودجەی دیاریکراوە (${fmt(b)} د.ع). ڕێژەی بەکارهێنان: %${Math.round(pct)}.` : `گەیشتووەتە %${Math.round(pct)}ی بودجە (${fmt(spent)} لە ${fmt(b)} د.ع). تەنها ${fmt(remaining)} د.ع لە سنوورەکە ماوە.`,
 					type: "budget",
 					urgent: isOver || pct >= 90,
@@ -87634,7 +87641,7 @@ function computeSmartNotifications(recurring, todayTxs, doc, names, langIndex = 
 			items.forEach((item) => {
 				if (item.status === "pending" && nowMs - item.createdAt >= 864e5) list.push({
 					id: `impulse_${item.id}`,
-					title: `٢٤ کاتژمێر تەواو بوو: ${item.n} ⏳`,
+					title: `٢٤ کاتژمێر تەواو بوو: ${item.n}`,
 					body: `ئێستا دەتوانیت بە ئارامی بڕیار بدەیت: ئایا هێشتا پێویستت پێیەتی یان پاشەکەوتی دەکەیت؟`,
 					type: "impulse",
 					urgent: true
@@ -87644,7 +87651,7 @@ function computeSmartNotifications(recurring, todayTxs, doc, names, langIndex = 
 	} catch {}
 	if (now.getHours() >= 20 && todayTxs.length === 0) list.push({
 		id: `evening_${now.toISOString().slice(0, 10)}`,
-		title: "پێداچوونەوەی ئێواران 🌙",
+		title: "پێداچوونەوەی ئێواران",
 		body: "ئەمڕۆ هیچ خەرجییەکت تۆمار نەکردووە. ئەگەر شتێکت کڕیوە، بە ١ کلیک تۆماری بکە.",
 		type: "evening"
 	});
@@ -87671,7 +87678,7 @@ function checkAndDispatchBudgetAlert(tx, doc, names, currentMonth, langIndex = 0
 	const cat = CATEGORIES[catIdx];
 	const catName = getCategoryName(cat, langIndex);
 	const remaining = Math.max(0, budget - totalSpent);
-	const title = isOver ? `🚨 تێپەڕاندنی بودجە: ${catName}` : `⚠️ نزیکبوونەوە لە سنووری بودجە: ${catName}`;
+	const title = isOver ? `تێپەڕاندنی بودجە: ${catName}` : `نزیکبوونەوە لە سنووری بودجە: ${catName}`;
 	const body = isOver ? `خەرجی پۆلی «${catName}» بە تەواوی بودجەکەی تێپەڕاند! (${fmt(totalSpent)} لە ${fmt(budget)} د.ع - %${Math.round(pct)}).` : `خەرجی پۆلی «${catName}» گەیشتە %${Math.round(pct)}ی بودجە (${fmt(totalSpent)} لە ${fmt(budget)} د.ع). تەنها ${fmt(remaining)} د.ع ماوە.`;
 	let alreadySent = false;
 	try {
@@ -87712,7 +87719,7 @@ function checkAndDispatchBudgetAlert(tx, doc, names, currentMonth, langIndex = 0
 */
 async function sendTestBudgetNotification(catName = "خۆراک و مارکێت") {
 	if (await requestBrowserNotifications()) {
-		sendBrowserNotification(`⚠️ تێستی ئاگاداری: نزیکبوونەوە لە سنووری ${catName}`, `ئاگاداری مۆبایل و براوسەر بۆ سنووری بودجەی پۆلەکان بە سەرکەوتوویی کار دەکات! (%٨٥ خەرجکراوە).`);
+		sendBrowserNotification(`تێستی ئاگاداری: نزیکبوونەوە لە سنووری ${catName}`, `ئاگاداری مۆبایل و براوسەر بۆ سنووری بودجەی پۆلەکان بە سەرکەوتوویی کار دەکات! (%٨٥ خەرجکراوە).`);
 		playAlertChime();
 		triggerVibration([
 			150,
@@ -87933,6 +87940,792 @@ function usePWAInstall() {
 	};
 }
 //#endregion
+//#region node_modules/@capacitor/core/dist/index.js
+/*! Capacitor: https://capacitorjs.com/ - MIT License */
+var ExceptionCode;
+(function(ExceptionCode) {
+	/**
+	* API is not implemented.
+	*
+	* This usually means the API can't be used because it is not implemented for
+	* the current platform.
+	*/
+	ExceptionCode["Unimplemented"] = "UNIMPLEMENTED";
+	/**
+	* API is not available.
+	*
+	* This means the API can't be used right now because:
+	*   - it is currently missing a prerequisite, such as network connectivity
+	*   - it requires a particular platform or browser version
+	*/
+	ExceptionCode["Unavailable"] = "UNAVAILABLE";
+})(ExceptionCode || (ExceptionCode = {}));
+var CapacitorException = class extends Error {
+	constructor(message, code, data) {
+		super(message);
+		this.message = message;
+		this.code = code;
+		this.data = data;
+	}
+};
+var getPlatformId = (win) => {
+	var _a, _b;
+	if (win === null || win === void 0 ? void 0 : win.androidBridge) return "android";
+	else if ((_b = (_a = win === null || win === void 0 ? void 0 : win.webkit) === null || _a === void 0 ? void 0 : _a.messageHandlers) === null || _b === void 0 ? void 0 : _b.bridge) return "ios";
+	else return "web";
+};
+var createCapacitor = (win) => {
+	const capCustomPlatform = win.CapacitorCustomPlatform || null;
+	const cap = win.Capacitor || {};
+	const Plugins = cap.Plugins = cap.Plugins || {};
+	const getPlatform = () => {
+		return capCustomPlatform !== null ? capCustomPlatform.name : getPlatformId(win);
+	};
+	const isNativePlatform = () => getPlatform() !== "web";
+	const isPluginAvailable = (pluginName) => {
+		const plugin = registeredPlugins.get(pluginName);
+		if (plugin === null || plugin === void 0 ? void 0 : plugin.platforms.has(getPlatform())) return true;
+		if (getPluginHeader(pluginName)) return true;
+		return false;
+	};
+	const getPluginHeader = (pluginName) => {
+		var _a;
+		return (_a = cap.PluginHeaders) === null || _a === void 0 ? void 0 : _a.find((h) => h.name === pluginName);
+	};
+	const handleError = (err) => win.console.error(err);
+	const registeredPlugins = /* @__PURE__ */ new Map();
+	const registerPlugin = (pluginName, jsImplementations = {}) => {
+		const registeredPlugin = registeredPlugins.get(pluginName);
+		if (registeredPlugin) {
+			console.warn(`Capacitor plugin "${pluginName}" already registered. Cannot register plugins twice.`);
+			return registeredPlugin.proxy;
+		}
+		const platform = getPlatform();
+		const pluginHeader = getPluginHeader(pluginName);
+		let jsImplementation;
+		const loadPluginImplementation = async () => {
+			if (!jsImplementation && platform in jsImplementations) jsImplementation = typeof jsImplementations[platform] === "function" ? jsImplementation = await jsImplementations[platform]() : jsImplementation = jsImplementations[platform];
+			else if (capCustomPlatform !== null && !jsImplementation && "web" in jsImplementations) jsImplementation = typeof jsImplementations["web"] === "function" ? jsImplementation = await jsImplementations["web"]() : jsImplementation = jsImplementations["web"];
+			return jsImplementation;
+		};
+		const createPluginMethod = (impl, prop) => {
+			var _a, _b;
+			if (pluginHeader) {
+				const methodHeader = pluginHeader === null || pluginHeader === void 0 ? void 0 : pluginHeader.methods.find((m) => prop === m.name);
+				if (methodHeader) {
+					if (methodHeader.rtype === "promise") return (options) => cap.nativePromise(pluginName, prop.toString(), options);
+					else return (options, callback) => cap.nativeCallback(pluginName, prop.toString(), options, callback);
+				} else if (impl) return (_a = impl[prop]) === null || _a === void 0 ? void 0 : _a.bind(impl);
+			} else if (impl) return (_b = impl[prop]) === null || _b === void 0 ? void 0 : _b.bind(impl);
+			else throw new CapacitorException(`"${pluginName}" plugin is not implemented on ${platform}`, ExceptionCode.Unimplemented);
+		};
+		const createPluginMethodWrapper = (prop) => {
+			let remove;
+			const wrapper = (...args) => {
+				const p = loadPluginImplementation().then((impl) => {
+					const fn = createPluginMethod(impl, prop);
+					if (fn) {
+						const p = fn(...args);
+						remove = p === null || p === void 0 ? void 0 : p.remove;
+						return p;
+					} else throw new CapacitorException(`"${pluginName}.${prop}()" is not implemented on ${platform}`, ExceptionCode.Unimplemented);
+				});
+				if (prop === "addListener") p.remove = async () => remove();
+				return p;
+			};
+			wrapper.toString = () => `${prop.toString()}() { [capacitor code] }`;
+			Object.defineProperty(wrapper, "name", {
+				value: prop,
+				writable: false,
+				configurable: false
+			});
+			return wrapper;
+		};
+		const addListener = createPluginMethodWrapper("addListener");
+		const removeListener = createPluginMethodWrapper("removeListener");
+		const addListenerNative = (eventName, callback) => {
+			const call = addListener({ eventName }, callback);
+			const remove = async () => {
+				const callbackId = await call;
+				removeListener({
+					eventName,
+					callbackId
+				}, callback);
+			};
+			const p = new Promise((resolve) => call.then(() => resolve({ remove })));
+			p.remove = async () => {
+				console.warn(`Using addListener() without 'await' is deprecated.`);
+				await remove();
+			};
+			return p;
+		};
+		const proxy = new Proxy({}, { get(_, prop) {
+			switch (prop) {
+				case "$$typeof": return;
+				case "toJSON": return () => ({});
+				case "addListener": return pluginHeader ? addListenerNative : addListener;
+				case "removeListener": return removeListener;
+				default: return createPluginMethodWrapper(prop);
+			}
+		} });
+		Plugins[pluginName] = proxy;
+		registeredPlugins.set(pluginName, {
+			name: pluginName,
+			proxy,
+			platforms: /* @__PURE__ */ new Set([...Object.keys(jsImplementations), ...pluginHeader ? [platform] : []])
+		});
+		return proxy;
+	};
+	if (!cap.convertFileSrc) cap.convertFileSrc = (filePath) => filePath;
+	cap.getPlatform = getPlatform;
+	cap.handleError = handleError;
+	cap.isNativePlatform = isNativePlatform;
+	cap.isPluginAvailable = isPluginAvailable;
+	cap.registerPlugin = registerPlugin;
+	cap.Exception = CapacitorException;
+	cap.DEBUG = !!cap.DEBUG;
+	cap.isLoggingEnabled = !!cap.isLoggingEnabled;
+	return cap;
+};
+var initCapacitorGlobal = (win) => win.Capacitor = createCapacitor(win);
+var Capacitor = /*#__PURE__*/ initCapacitorGlobal(typeof globalThis !== "undefined" ? globalThis : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : {});
+var registerPlugin = Capacitor.registerPlugin;
+/**
+* Base class web plugins should extend.
+*/
+var WebPlugin = class {
+	constructor() {
+		this.listeners = {};
+		this.retainedEventArguments = {};
+		this.windowListeners = {};
+	}
+	addListener(eventName, listenerFunc) {
+		let firstListener = false;
+		if (!this.listeners[eventName]) {
+			this.listeners[eventName] = [];
+			firstListener = true;
+		}
+		this.listeners[eventName].push(listenerFunc);
+		const windowListener = this.windowListeners[eventName];
+		if (windowListener && !windowListener.registered) this.addWindowListener(windowListener);
+		if (firstListener) this.sendRetainedArgumentsForEvent(eventName);
+		const remove = async () => this.removeListener(eventName, listenerFunc);
+		return Promise.resolve({ remove });
+	}
+	async removeAllListeners() {
+		this.listeners = {};
+		for (const listener in this.windowListeners) this.removeWindowListener(this.windowListeners[listener]);
+		this.windowListeners = {};
+	}
+	notifyListeners(eventName, data, retainUntilConsumed) {
+		const listeners = this.listeners[eventName];
+		if (!listeners) {
+			if (retainUntilConsumed) {
+				let args = this.retainedEventArguments[eventName];
+				if (!args) args = [];
+				args.push(data);
+				this.retainedEventArguments[eventName] = args;
+			}
+			return;
+		}
+		listeners.forEach((listener) => listener(data));
+	}
+	hasListeners(eventName) {
+		var _a;
+		return !!((_a = this.listeners[eventName]) === null || _a === void 0 ? void 0 : _a.length);
+	}
+	registerWindowListener(windowEventName, pluginEventName) {
+		this.windowListeners[pluginEventName] = {
+			registered: false,
+			windowEventName,
+			pluginEventName,
+			handler: (event) => {
+				this.notifyListeners(pluginEventName, event);
+			}
+		};
+	}
+	unimplemented(msg = "not implemented") {
+		return new Capacitor.Exception(msg, ExceptionCode.Unimplemented);
+	}
+	unavailable(msg = "not available") {
+		return new Capacitor.Exception(msg, ExceptionCode.Unavailable);
+	}
+	async removeListener(eventName, listenerFunc) {
+		const listeners = this.listeners[eventName];
+		if (!listeners) return;
+		const index = listeners.indexOf(listenerFunc);
+		if (index !== -1) this.listeners[eventName].splice(index, 1);
+		if (!this.listeners[eventName].length) this.removeWindowListener(this.windowListeners[eventName]);
+	}
+	addWindowListener(handle) {
+		window.addEventListener(handle.windowEventName, handle.handler);
+		handle.registered = true;
+	}
+	removeWindowListener(handle) {
+		if (!handle) return;
+		window.removeEventListener(handle.windowEventName, handle.handler);
+		handle.registered = false;
+	}
+	sendRetainedArgumentsForEvent(eventName) {
+		const args = this.retainedEventArguments[eventName];
+		if (!args) return;
+		delete this.retainedEventArguments[eventName];
+		args.forEach((arg) => {
+			this.notifyListeners(eventName, arg);
+		});
+	}
+};
+/******** END WEB VIEW PLUGIN ********/
+/******** COOKIES PLUGIN ********/
+/**
+* Safely web encode a string value (inspired by js-cookie)
+* @param str The string value to encode
+*/
+var encode = (str) => encodeURIComponent(str).replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent).replace(/[()]/g, escape);
+/**
+* Safely web decode a string value (inspired by js-cookie)
+* @param str The string value to decode
+*/
+var decode = (str) => str.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent);
+var CapacitorCookiesPluginWeb = class extends WebPlugin {
+	async getCookies() {
+		const cookies = document.cookie;
+		const cookieMap = {};
+		cookies.split(";").forEach((cookie) => {
+			if (cookie.length <= 0) return;
+			let [key, value] = cookie.replace(/=/, "CAP_COOKIE").split("CAP_COOKIE");
+			key = decode(key).trim();
+			value = decode(value).trim();
+			cookieMap[key] = value;
+		});
+		return cookieMap;
+	}
+	async setCookie(options) {
+		try {
+			const encodedKey = encode(options.key);
+			const encodedValue = encode(options.value);
+			const expires = options.expires ? `; expires=${options.expires.replace("expires=", "")}` : "";
+			const path = (options.path || "/").replace("path=", "");
+			const domain = options.url != null && options.url.length > 0 ? `domain=${options.url}` : "";
+			document.cookie = `${encodedKey}=${encodedValue || ""}${expires}; path=${path}; ${domain};`;
+		} catch (error) {
+			return Promise.reject(error);
+		}
+	}
+	async deleteCookie(options) {
+		try {
+			document.cookie = `${options.key}=; Max-Age=0`;
+		} catch (error) {
+			return Promise.reject(error);
+		}
+	}
+	async clearCookies() {
+		try {
+			const cookies = document.cookie.split(";") || [];
+			for (const cookie of cookies) document.cookie = cookie.replace(/^ +/, "").replace(/=.*/, `=;expires=${(/* @__PURE__ */ new Date()).toUTCString()};path=/`);
+		} catch (error) {
+			return Promise.reject(error);
+		}
+	}
+	async clearAllCookies() {
+		try {
+			await this.clearCookies();
+		} catch (error) {
+			return Promise.reject(error);
+		}
+	}
+};
+registerPlugin("CapacitorCookies", { web: () => new CapacitorCookiesPluginWeb() });
+/**
+* Read in a Blob value and return it as a base64 string
+* @param blob The blob value to convert to a base64 string
+*/
+var readBlobAsBase64 = async (blob) => new Promise((resolve, reject) => {
+	const reader = new FileReader();
+	reader.onload = () => {
+		const base64String = reader.result;
+		resolve(base64String.indexOf(",") >= 0 ? base64String.split(",")[1] : base64String);
+	};
+	reader.onerror = (error) => reject(error);
+	reader.readAsDataURL(blob);
+});
+/**
+* Normalize an HttpHeaders map by lowercasing all of the values
+* @param headers The HttpHeaders object to normalize
+*/
+var normalizeHttpHeaders = (headers = {}) => {
+	const originalKeys = Object.keys(headers);
+	return Object.keys(headers).map((k) => k.toLocaleLowerCase()).reduce((acc, key, index) => {
+		acc[key] = headers[originalKeys[index]];
+		return acc;
+	}, {});
+};
+/**
+* Builds a string of url parameters that
+* @param params A map of url parameters
+* @param shouldEncode true if you should encodeURIComponent() the values (true by default)
+*/
+var buildUrlParams = (params, shouldEncode = true) => {
+	if (!params) return null;
+	return Object.entries(params).reduce((accumulator, entry) => {
+		const [key, value] = entry;
+		let encodedValue;
+		let item;
+		if (Array.isArray(value)) {
+			item = "";
+			value.forEach((str) => {
+				encodedValue = shouldEncode ? encodeURIComponent(str) : str;
+				item += `${key}=${encodedValue}&`;
+			});
+			item.slice(0, -1);
+		} else {
+			encodedValue = shouldEncode ? encodeURIComponent(value) : value;
+			item = `${key}=${encodedValue}`;
+		}
+		return `${accumulator}&${item}`;
+	}, "").substr(1);
+};
+/**
+* Build the RequestInit object based on the options passed into the initial request
+* @param options The Http plugin options
+* @param extra Any extra RequestInit values
+*/
+var buildRequestInit = (options, extra = {}) => {
+	const output = Object.assign({
+		method: options.method || "GET",
+		headers: options.headers
+	}, extra);
+	const type = normalizeHttpHeaders(options.headers)["content-type"] || "";
+	if (typeof options.data === "string") output.body = options.data;
+	else if (type.includes("application/x-www-form-urlencoded")) {
+		const params = new URLSearchParams();
+		for (const [key, value] of Object.entries(options.data || {})) params.set(key, value);
+		output.body = params.toString();
+	} else if (type.includes("multipart/form-data") || options.data instanceof FormData) {
+		const form = new FormData();
+		if (options.data instanceof FormData) options.data.forEach((value, key) => {
+			form.append(key, value);
+		});
+		else for (const key of Object.keys(options.data)) form.append(key, options.data[key]);
+		output.body = form;
+		const headers = new Headers(output.headers);
+		headers.delete("content-type");
+		output.headers = headers;
+	} else if (type.includes("application/json") || typeof options.data === "object") output.body = JSON.stringify(options.data);
+	return output;
+};
+var CapacitorHttpPluginWeb = class extends WebPlugin {
+	/**
+	* Perform an Http request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async request(options) {
+		const requestInit = buildRequestInit(options, options.webFetchExtra);
+		const urlParams = buildUrlParams(options.params, options.shouldEncodeUrlParams);
+		const url = urlParams ? `${options.url}?${urlParams}` : options.url;
+		const response = await fetch(url, requestInit);
+		const contentType = response.headers.get("content-type") || "";
+		let { responseType = "text" } = response.ok ? options : {};
+		if (contentType.includes("application/json")) responseType = "json";
+		let data;
+		let blob;
+		switch (responseType) {
+			case "arraybuffer":
+			case "blob":
+				blob = await response.blob();
+				data = await readBlobAsBase64(blob);
+				break;
+			case "json":
+				data = await response.json();
+				break;
+			default: data = await response.text();
+		}
+		const headers = {};
+		response.headers.forEach((value, key) => {
+			headers[key] = value;
+		});
+		return {
+			data,
+			headers,
+			status: response.status,
+			url: response.url
+		};
+	}
+	/**
+	* Perform an Http GET request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async get(options) {
+		return this.request(Object.assign(Object.assign({}, options), { method: "GET" }));
+	}
+	/**
+	* Perform an Http POST request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async post(options) {
+		return this.request(Object.assign(Object.assign({}, options), { method: "POST" }));
+	}
+	/**
+	* Perform an Http PUT request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async put(options) {
+		return this.request(Object.assign(Object.assign({}, options), { method: "PUT" }));
+	}
+	/**
+	* Perform an Http PATCH request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async patch(options) {
+		return this.request(Object.assign(Object.assign({}, options), { method: "PATCH" }));
+	}
+	/**
+	* Perform an Http DELETE request given a set of options
+	* @param options Options to build the HTTP request
+	*/
+	async delete(options) {
+		return this.request(Object.assign(Object.assign({}, options), { method: "DELETE" }));
+	}
+};
+registerPlugin("CapacitorHttp", { web: () => new CapacitorHttpPluginWeb() });
+/******** END HTTP PLUGIN ********/
+/******** SYSTEM BARS PLUGIN ********/
+/**
+* Available status bar styles.
+*/
+var SystemBarsStyle;
+(function(SystemBarsStyle) {
+	/**
+	* Light system bar content on a dark background.
+	*
+	* @since 8.0.0
+	*/
+	SystemBarsStyle["Dark"] = "DARK";
+	/**
+	* For dark system bar content on a light background.
+	*
+	* @since 8.0.0
+	*/
+	SystemBarsStyle["Light"] = "LIGHT";
+	/**
+	* The style is based on the device appearance or the underlying content.
+	* If the device is using Dark mode, the system bars content will be light.
+	* If the device is using Light mode, the system bars content will be dark.
+	*
+	* @since 8.0.0
+	*/
+	SystemBarsStyle["Default"] = "DEFAULT";
+})(SystemBarsStyle || (SystemBarsStyle = {}));
+/**
+* Available system bar types.
+*/
+var SystemBarType;
+(function(SystemBarType) {
+	/**
+	* The top status bar on both Android and iOS.
+	*
+	* @since 8.0.0
+	*/
+	SystemBarType["StatusBar"] = "StatusBar";
+	/**
+	* The navigation bar (or gesture bar on iOS) on both Android and iOS.
+	*
+	* @since 8.0.0
+	*/
+	SystemBarType["NavigationBar"] = "NavigationBar";
+})(SystemBarType || (SystemBarType = {}));
+var SystemBarsPluginWeb = class extends WebPlugin {
+	async setStyle() {
+		this.unavailable("not available for web");
+	}
+	async setAnimation() {
+		this.unavailable("not available for web");
+	}
+	async show() {
+		this.unavailable("not available for web");
+	}
+	async hide() {
+		this.unavailable("not available for web");
+	}
+};
+registerPlugin("SystemBars", { web: () => new SystemBarsPluginWeb() });
+//#endregion
+//#region node_modules/@capacitor/haptics/dist/esm/definitions.js
+var ImpactStyle;
+(function(ImpactStyle) {
+	/**
+	* A collision between large, heavy user interface elements
+	*
+	* @since 1.0.0
+	*/
+	ImpactStyle["Heavy"] = "HEAVY";
+	/**
+	* A collision between moderately sized user interface elements
+	*
+	* @since 1.0.0
+	*/
+	ImpactStyle["Medium"] = "MEDIUM";
+	/**
+	* A collision between small, light user interface elements
+	*
+	* @since 1.0.0
+	*/
+	ImpactStyle["Light"] = "LIGHT";
+})(ImpactStyle || (ImpactStyle = {}));
+var NotificationType;
+(function(NotificationType) {
+	/**
+	* A notification feedback type indicating that a task has completed successfully
+	*
+	* @since 1.0.0
+	*/
+	NotificationType["Success"] = "SUCCESS";
+	/**
+	* A notification feedback type indicating that a task has produced a warning
+	*
+	* @since 1.0.0
+	*/
+	NotificationType["Warning"] = "WARNING";
+	/**
+	* A notification feedback type indicating that a task has failed
+	*
+	* @since 1.0.0
+	*/
+	NotificationType["Error"] = "ERROR";
+})(NotificationType || (NotificationType = {}));
+//#endregion
+//#region \0vite/preload-helper.js
+var scriptRel = "modulepreload";
+var assetsURL = function(dep) {
+	return "/" + dep;
+};
+var seen = {};
+var isCssPreloadUrl = function isCssPreloadUrl(url) {
+	return url.pathname.endsWith(".css");
+};
+var preloadOnce = function preloadOnce(seen, href, preload) {
+	if (href in seen) return seen[href];
+	const promise = preload();
+	if (!promise) {
+		seen[href] = void 0;
+		return;
+	}
+	const preloadPromise = promise.then(() => {
+		seen[href] = void 0;
+	}, (err) => {
+		seen[href] = void 0;
+		throw err;
+	});
+	seen[href] = preloadPromise;
+	return preloadPromise;
+};
+var __vitePreload = function preload(baseModule, deps, importerUrl) {
+	let promise = Promise.resolve();
+	if (deps && deps.length > 0) {
+		let preloadedHrefs;
+		const cspNonceMeta = document.querySelector("meta[property=csp-nonce]");
+		const cspNonce = cspNonceMeta?.nonce || cspNonceMeta?.getAttribute("nonce");
+		function allSettled(promises) {
+			return Promise.all(promises.map((p) => Promise.resolve(p).then((value) => ({
+				status: "fulfilled",
+				value
+			}), (reason) => ({
+				status: "rejected",
+				reason
+			}))));
+		}
+		function importMetaResolve(specifier) {
+			if (import.meta.resolve) return new URL(import.meta.resolve(specifier));
+			return new URL(
+				specifier,
+				/** #__KEEP__ */
+				import.meta.url
+			);
+		}
+		promise = allSettled(deps.map((depString) => {
+			depString = assetsURL(depString, importerUrl);
+			const dep = importMetaResolve(depString);
+			const isCss = isCssPreloadUrl(dep);
+			return preloadOnce(seen, dep.href, () => {
+				if (preloadedHrefs === void 0) {
+					preloadedHrefs = {
+						all: /* @__PURE__ */ new Set(),
+						styles: /* @__PURE__ */ new Set()
+					};
+					const links = document.getElementsByTagName("link");
+					for (let i = links.length - 1; i >= 0; i--) {
+						const link = links[i];
+						preloadedHrefs.all.add(link.href);
+						if (link.rel === "stylesheet") preloadedHrefs.styles.add(link.href);
+					}
+				}
+				if ((isCss ? preloadedHrefs.styles : preloadedHrefs.all).has(dep.href)) return;
+				const link = document.createElement("link");
+				link.rel = isCss ? "stylesheet" : scriptRel;
+				if (!isCss) link.as = "script";
+				link.crossOrigin = "";
+				link.href = dep.href;
+				if (cspNonce) link.setAttribute("nonce", cspNonce);
+				document.head.appendChild(link);
+				if (isCss) return new Promise((res, rej) => {
+					link.addEventListener("load", res);
+					link.addEventListener("error", () => rej(/* @__PURE__ */ new Error(`Unable to preload CSS for ${dep}`)));
+				});
+			});
+		}).filter((p) => p !== void 0));
+	}
+	function handlePreloadError(err) {
+		const e = new Event("vite:preloadError", { cancelable: true });
+		e.payload = err;
+		window.dispatchEvent(e);
+		if (!e.defaultPrevented) throw err;
+	}
+	return promise.then((res) => {
+		for (const item of res || []) {
+			if (item.status !== "rejected") continue;
+			handlePreloadError(item.reason);
+		}
+		return baseModule().catch(handlePreloadError);
+	});
+};
+//#endregion
+//#region node_modules/@capacitor/haptics/dist/esm/index.js
+var Haptics = registerPlugin("Haptics", { web: () => __vitePreload(() => import("./web-meO0zevx.js").then((m) => new m.HapticsWeb()), []) });
+//#endregion
+//#region src/utils/haptics.ts
+/**
+* Universal Mobile Haptics Engine
+* Provides subtle, tactile, Apple-grade vibration feedback across iOS, Android Capacitor, and Web Browsers.
+*/
+var HapticEngine = class {
+	constructor() {
+		this.enabled = true;
+		try {
+			const saved = localStorage.getItem("app_haptics_enabled");
+			if (saved !== null) this.enabled = saved === "true";
+		} catch {
+			this.enabled = true;
+		}
+	}
+	setEnabled(val) {
+		this.enabled = val;
+		try {
+			localStorage.setItem("app_haptics_enabled", String(val));
+		} catch {}
+	}
+	isEnabled() {
+		return this.enabled;
+	}
+	/**
+	* Subtle tick for 1-Tap quick expenses, tab switches, and toggles (10-15ms)
+	*/
+	async light() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.impact({ style: ImpactStyle.Light });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate(12);
+			} catch {}
+		}
+	}
+	/**
+	* Crisp bump for primary action buttons, opening modals, camera scan (25-30ms)
+	*/
+	async medium() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.impact({ style: ImpactStyle.Medium });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate(28);
+			} catch {}
+		}
+	}
+	/**
+	* Firm impact for important milestones or primary saves (40-50ms)
+	*/
+	async heavy() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.impact({ style: ImpactStyle.Heavy });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate(45);
+			} catch {}
+		}
+	}
+	/**
+	* Harmonious double-pulse for successfully saving an expense, deposit, or backup
+	*/
+	async success() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.notification({ type: NotificationType.Success });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate([
+					15,
+					60,
+					20
+				]);
+			} catch {}
+		}
+	}
+	/**
+	* Warning pulse for budget limit warnings, impulse pauser reminder, delete actions
+	*/
+	async warning() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.notification({ type: NotificationType.Warning });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate([
+					30,
+					80,
+					30
+				]);
+			} catch {}
+		}
+	}
+	/**
+	* Distinct pulse for error or budget overspend
+	*/
+	async error() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.notification({ type: NotificationType.Error });
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate([
+					40,
+					100,
+					40,
+					100,
+					40
+				]);
+			} catch {}
+		}
+	}
+	/**
+	* Light selection change feedback for pickers and sliders
+	*/
+	async selection() {
+		if (!this.enabled) return;
+		try {
+			await Haptics.selectionStart();
+			await Haptics.selectionChanged();
+			await Haptics.selectionEnd();
+		} catch {
+			if (typeof window !== "undefined" && "vibrate" in navigator) try {
+				navigator.vibrate(8);
+			} catch {}
+		}
+	}
+};
+var haptics = new HapticEngine();
+//#endregion
 //#region src/components/Header.tsx
 var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, settings, onSwitchWorkspace, onAddWorkspace, activeTab = "expenses", onOpenSettings, isCloudConnected = false, onOpenCloudSync, notifications = [], onOpenPdfReport, onOpenAiAdvisor }) => {
 	const [showWorkspaceMenu, setShowWorkspaceMenu] = (0, import_react.useState)(false);
@@ -88020,14 +88813,17 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 					]
 				})] })]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex items-center gap-1.5 sm:gap-2",
+				className: "flex flex-wrap items-center gap-1.5 sm:gap-2",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex items-center bg-slate-100 dark:bg-slate-800/90 rounded-2xl p-1 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs",
 						children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								type: "button",
-								onClick: () => onChangeMonth(shiftMonth(currentMonth, -1)),
+								onClick: () => {
+									haptics.light();
+									onChangeMonth(shiftMonth(currentMonth, -1));
+								},
 								className: "p-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-700 rounded-xl transition cursor-pointer",
 								title: t("prev_month"),
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronRight, { className: "w-3.5 h-3.5 rtl:rotate-0 ltr:rotate-180" })
@@ -88036,11 +88832,14 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 								type: "month",
 								value: currentMonth,
 								onChange: (e) => e.target.value && onChangeMonth(e.target.value),
-								className: "bg-transparent text-slate-900 dark:text-white text-xs md:text-sm font-bold focus:outline-none cursor-pointer px-1.5 text-center"
+								className: "bg-transparent text-slate-900 dark:text-white text-xs md:text-sm font-bold focus:outline-none cursor-pointer px-1 text-center max-w-[125px] sm:max-w-none"
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 								type: "button",
-								onClick: () => onChangeMonth(shiftMonth(currentMonth, 1)),
+								onClick: () => {
+									haptics.light();
+									onChangeMonth(shiftMonth(currentMonth, 1));
+								},
 								className: "p-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-700 rounded-xl transition cursor-pointer",
 								title: t("next_month"),
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ChevronLeft, { className: "w-3.5 h-3.5 rtl:rotate-0 ltr:rotate-180" })
@@ -88066,12 +88865,12 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 								children: notifications.length
 							})]
 						}), showNotifMenu && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "absolute top-full mt-2 end-0 z-50 w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-3.5 animate-in fade-in zoom-in-95 duration-150",
+							className: "absolute top-full mt-2 end-0 z-50 w-72 sm:w-80 max-w-[calc(100vw-2rem)] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-3.5 animate-in fade-in zoom-in-95 duration-150",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "flex items-center justify-between mb-2.5",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-xs font-bold text-slate-900 dark:text-white",
-									children: "ئاگادارکردنەوە زیرەکەکان 🔔"
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { className: "w-3.5 h-3.5 text-teal-600 dark:text-teal-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئاگادارکردنەوە زیرەکەکان" })]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 									type: "button",
 									onClick: async () => {
@@ -88080,9 +88879,9 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 									className: "text-[10px] font-bold text-teal-600 dark:text-teal-400 hover:underline cursor-pointer",
 									children: "چالاککردنی ئاگادارکردنەوەی مۆبایل"
 								})]
-							}), notifications.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "text-center py-5 text-xs text-slate-400",
-								children: "هیچ ئاگادارکردنەوەیەکی نوێ نییە 🌿"
+							}), notifications.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "text-center py-5 text-xs text-slate-400 flex flex-col items-center gap-1.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Leaf, { className: "w-6 h-6 text-emerald-500/70" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "هیچ ئاگادارکردنەوەیەکی نوێ نییە" })]
 							}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: "space-y-2 max-h-64 overflow-y-auto",
 								children: notifications.map((n) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -88090,9 +88889,12 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 									children: [
 										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center justify-between gap-1 mb-0.5",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-												className: "font-bold text-slate-900 dark:text-white truncate",
-												children: n.title
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+												className: "font-bold text-slate-900 dark:text-white truncate flex items-center gap-1.5",
+												children: [n.type === "budget" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, { className: `w-3.5 h-3.5 shrink-0 ${n.urgent ? "text-rose-500" : "text-amber-500"}` }) : n.type === "impulse" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3.5 h-3.5 shrink-0 text-amber-500" }) : n.type === "evening" ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Moon, { className: "w-3.5 h-3.5 shrink-0 text-indigo-500" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { className: "w-3.5 h-3.5 shrink-0 text-teal-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+													className: "truncate",
+													children: n.title
+												})]
 											}), n.percentage !== void 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 												className: `text-[10px] font-mono px-1.5 py-0.2 rounded font-bold shrink-0 ${n.percentage >= 100 ? "bg-rose-500/20 text-rose-600 dark:text-rose-400" : "bg-amber-500/20 text-amber-600 dark:text-amber-400"}`,
 												children: ["%", Math.round(n.percentage)]
@@ -88115,7 +88917,10 @@ var Header = ({ t, isLocked, onToggleLock, currentMonth, onChangeMonth, names, s
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
-						onClick: onToggleLock,
+						onClick: () => {
+							haptics.medium();
+							onToggleLock();
+						},
 						title: isLocked ? t("enp") : t("locked"),
 						className: `p-2.5 rounded-2xl border transition-all flex items-center justify-center cursor-pointer shadow-2xs ${isLocked ? "bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-300 border-amber-300/80 dark:border-amber-700/80 hover:bg-amber-100" : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200/80 dark:border-slate-700 hover:bg-slate-200/70 dark:hover:bg-slate-700"}`,
 						children: isLocked ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(EyeOff, { className: "w-4 h-4 text-amber-600 dark:text-amber-400" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Eye, { className: "w-4 h-4 text-emerald-600 dark:text-emerald-400" })
@@ -88253,11 +89058,13 @@ var BottomNav = ({ activeTab, onChangeTab, onOpenAddExpense, t }) => {
 	const isExpenseActive = activeTab === "expenses";
 	const handleCenterClick = (e) => {
 		e.preventDefault();
+		haptics.medium();
 		if (!isExpenseActive) onChangeTab("expenses");
 		else if (onOpenAddExpense) onOpenAddExpense();
 	};
 	const handleQuickAddClick = (e) => {
 		e.stopPropagation();
+		haptics.medium();
 		if (onOpenAddExpense) onOpenAddExpense();
 		else onChangeTab("expenses");
 	};
@@ -88265,7 +89072,10 @@ var BottomNav = ({ activeTab, onChangeTab, onOpenAddExpense, t }) => {
 		const isActive = activeTab === tab.key || tab.key === "more" && activeTab === "shopping";
 		return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 			type: "button",
-			onClick: () => onChangeTab(tab.key),
+			onClick: () => {
+				haptics.light();
+				onChangeTab(tab.key);
+			},
 			className: `flex-1 min-w-[50px] max-w-[80px] py-1.5 px-1 rounded-2xl flex flex-col items-center justify-center gap-0.5 text-[11px] sm:text-xs font-semibold transition-all cursor-pointer ${isActive ? "text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 dark:bg-emerald-500/20 scale-102 shadow-2xs" : "text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-800/70"}`,
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 				className: `transition-transform duration-150 ${isActive ? "scale-110" : ""}`,
@@ -89842,8 +90652,8 @@ var ImpulsePauserModal = ({ isOpen, onClose, onAddExpense, defaultRate, langInde
 							className: "text-[11px] font-semibold text-slate-500 dark:text-slate-400",
 							children: "کۆی پارەی ڕزگارکراو لە کڕینی هەڵەشەیی:"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("b", {
-							className: "text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono",
-							children: [fmt(totalSaved), " د.ع 🎉"]
+							className: "text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono inline-flex items-center gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [fmt(totalSaved), " د.ع"] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PartyPopper, { className: "w-4 h-4 text-emerald-500" })]
 						})]
 					})]
 				}),
@@ -89921,10 +90731,10 @@ var ImpulsePauserModal = ({ isOpen, onClose, onAddExpense, defaultRate, langInde
 								}, cat.id))
 							})] })]
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 							type: "submit",
-							className: "w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs transition shadow-2xs cursor-pointer",
-							children: "دەستپێکردنی مۆڵەتی ٢٤ کاتژمێری ئارامبوونەوە ⏳"
+							className: "w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs transition shadow-2xs cursor-pointer flex items-center justify-center gap-1.5",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "دەستپێکردنی مۆڵەتی ٢٤ کاتژمێری ئارامبوونەوە" })]
 						})
 					]
 				}),
@@ -89991,7 +90801,7 @@ var ImpulsePauserModal = ({ isOpen, onClose, onAddExpense, defaultRate, langInde
 										type: "button",
 										onClick: () => handleMarkSaved(item),
 										className: "py-1.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "پێویستم پێی نییە! (پاشەکەوتکرا 🎉)" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "پێویستم پێی نییە! (پاشەکەوتکرا)" })]
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										type: "button",
 										onClick: () => handleBuyNow(item),
@@ -90381,16 +91191,20 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 	const wantsPts = flowBasis > 0 ? wantsPct <= 30 ? 30 : Math.max(0, 30 - (wantsPct - 30) * 1.5) : 25;
 	const peaceScore = Math.min(100, Math.max(10, Math.round(budgetPts + savingsPts + wantsPts)));
 	const peaceTier = peaceScore >= 80 ? {
-		label: "نایاب 🌿",
+		label: "نایاب",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Leaf, { className: "w-3 h-3 text-emerald-400" }),
 		color: "bg-emerald-400"
 	} : peaceScore >= 60 ? {
-		label: "باش 👍",
+		label: "باش",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ThumbsUp, { className: "w-3 h-3 text-teal-400" }),
 		color: "bg-teal-400"
 	} : peaceScore >= 40 ? {
-		label: "ئاگاداری ⚠️",
+		label: "ئاگاداری",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, { className: "w-3 h-3 text-amber-400" }),
 		color: "bg-amber-400"
 	} : {
-		label: "پێویست بە ئارامی 🧘",
+		label: "پێویست بە ئارامی",
+		icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className: "w-3 h-3 text-rose-400" }),
 		color: "bg-rose-400"
 	};
 	const todayStr = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
@@ -90402,6 +91216,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 	const isEveningTime = (/* @__PURE__ */ new Date()).getHours() >= 17;
 	const handle1TapExpense = (item) => {
 		if (doc.closed) return;
+		haptics.success();
 		onAddExpense({
 			c: item.cat,
 			d: todayStr,
@@ -90472,13 +91287,18 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									title: "نمرەی ئارامی دارایی (Financial Peace Score)",
 									className: "flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-medium text-emerald-200",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className: "w-3.5 h-3.5 text-emerald-400 animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
-										"ئارامی: ",
-										peaceTier.label,
-										" (%",
-										peaceScore,
-										")"
-									] })]
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeartPulse, { className: "w-3.5 h-3.5 text-emerald-400 animate-pulse" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "inline-flex items-center gap-1",
+										children: [
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["ئارامی: ", peaceTier.label] }),
+											peaceTier.icon,
+											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+												"(%",
+												peaceScore,
+												")"
+											] })
+										]
+									})]
 								})
 							})]
 						}),
@@ -90679,61 +91499,69 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 							label: "نان و سەمون",
 							amount: 1e3,
 							cat: 6,
-							icon: "🥖",
+							Icon: Utensils,
+							iconBg: "bg-amber-100/80 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400",
 							color: "border-amber-200/60 dark:border-amber-800/40 bg-amber-50/50 dark:bg-amber-950/30"
 						},
 						{
 							label: "تەکسی",
 							amount: 3e3,
 							cat: 8,
-							icon: "🚕",
+							Icon: Car,
+							iconBg: "bg-yellow-100/80 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400",
 							color: "border-yellow-200/60 dark:border-yellow-800/40 bg-yellow-50/50 dark:bg-yellow-950/30"
 						},
 						{
 							label: "چای و کافێ",
 							amount: 2e3,
 							cat: 10,
-							icon: "☕",
+							Icon: Coffee,
+							iconBg: "bg-orange-100/80 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400",
 							color: "border-orange-200/60 dark:border-orange-800/40 bg-orange-50/50 dark:bg-orange-950/30"
 						},
 						{
 							label: "بەنزین",
 							amount: 15e3,
 							cat: 8,
-							icon: "⛽",
+							Icon: Fuel,
+							iconBg: "bg-blue-100/80 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400",
 							color: "border-blue-200/60 dark:border-blue-800/40 bg-blue-50/50 dark:bg-blue-950/30"
 						},
 						{
 							label: "مارکێت",
 							amount: 1e4,
 							cat: 6,
-							icon: "🛒",
+							Icon: ShoppingBag,
+							iconBg: "bg-emerald-100/80 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400",
 							color: "border-emerald-200/60 dark:border-emerald-800/40 bg-emerald-50/50 dark:bg-emerald-950/30"
 						}
-					].map((fav, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-						type: "button",
-						disabled: Boolean(doc.closed),
-						onClick: () => handle1TapExpense(fav),
-						className: `shrink-0 flex items-center gap-2 py-2 px-3 rounded-2xl border ${fav.color} shadow-2xs hover:scale-102 active:scale-95 transition-all text-start cursor-pointer group`,
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-lg",
-							children: fav.icon
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs font-bold text-slate-800 dark:text-slate-100 block whitespace-nowrap",
-							children: fav.label
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-							className: "text-[11px] font-mono font-bold text-teal-600 dark:text-teal-400 block whitespace-nowrap",
-							children: [
-								"+",
-								fmt(fav.amount),
-								" ",
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[9px] font-normal text-slate-400",
-									children: "د.ع"
-								})
-							]
-						})] })]
-					}, i))
+					].map((fav, i) => {
+						const FavIcon = fav.Icon;
+						return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+							type: "button",
+							disabled: Boolean(doc.closed),
+							onClick: () => handle1TapExpense(fav),
+							className: `shrink-0 flex items-center gap-2 py-2 px-3 rounded-2xl border ${fav.color} shadow-2xs hover:scale-102 active:scale-95 transition-all text-start cursor-pointer group`,
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: `w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${fav.iconBg}`,
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FavIcon, { className: "w-4 h-4" })
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "text-xs font-bold text-slate-800 dark:text-slate-100 block whitespace-nowrap",
+								children: fav.label
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "text-[11px] font-mono font-bold text-teal-600 dark:text-teal-400 block whitespace-nowrap",
+								children: [
+									"+",
+									fmt(fav.amount),
+									" ",
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-[9px] font-normal text-slate-400",
+										children: "د.ع"
+									})
+								]
+							})] })]
+						}, i);
+					})
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -90742,6 +91570,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						type: "button",
 						onClick: () => {
+							haptics.medium();
 							setModalDefaultRepeat(false);
 							setModalDefaultCat(6);
 							setEditingTx(null);
@@ -90753,7 +91582,10 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						type: "button",
-						onClick: () => setIsVoiceModalOpen(true),
+						onClick: () => {
+							haptics.medium();
+							setIsVoiceModalOpen(true);
+						},
 						disabled: Boolean(doc.closed),
 						className: "col-span-1 py-3 px-2 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98",
 						title: "تۆماری دەنگی",
@@ -90764,7 +91596,10 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						type: "button",
-						onClick: () => fileInputRef.current?.click(),
+						onClick: () => {
+							haptics.light();
+							fileInputRef.current?.click();
+						},
 						disabled: isScanning || Boolean(doc.closed),
 						className: "col-span-1 py-3 px-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-850 text-slate-800 dark:text-slate-100 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98",
 						title: "سکانی وەسڵ بە کامێرا",
@@ -90775,12 +91610,15 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						type: "button",
-						onClick: () => setIsImpulseModalOpen(true),
+						onClick: () => {
+							haptics.light();
+							setIsImpulseModalOpen(true);
+						},
 						className: "col-span-4 sm:col-span-1 py-2 sm:py-3 px-2 bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 dark:hover:bg-amber-900/50 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98",
 						title: "سندووقی ٢٤ کاتژمێر بۆ ڕاگرتنی خەرجی کاتی",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { className: "w-4 h-4 text-amber-600 dark:text-amber-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-xs",
-							children: "⏳ سندووقی ٢٤ کاتژمێر"
+							children: "سندووقی ٢٤ کاتژمێر"
 						})]
 					})
 				]
@@ -90794,10 +91632,11 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 				onChange: (e) => e.target.files?.[0] && handleReceiptScan(e.target.files[0])
 			}),
 			showRateModal && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs",
+				className: "fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-xs",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-white dark:bg-slate-900 rounded-3xl p-5 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in zoom-in-95 duration-150",
+					className: "bg-white dark:bg-slate-900 rounded-t-3xl sm:rounded-3xl p-5 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-bottom-5 sm:zoom-in-95 duration-150 pb-[max(24px,env(safe-area-inset-bottom))]",
 					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-12 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mx-auto mb-3 sm:hidden" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center justify-between mb-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", {
@@ -91138,7 +91977,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 							className: "flex items-center gap-2",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
 								className: "text-sm font-bold text-white",
-								children: "پێداچوونەوەی ئێواران 🌙"
+								children: "پێداچوونەوەی ئێواران"
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-[10px] px-2 py-0.5 rounded-full bg-indigo-400/20 text-indigo-200 font-semibold",
 								children: "کۆتایی ڕۆژ"
@@ -91174,7 +92013,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 							type: "button",
 							onClick: handleDismissEveningCheck,
 							className: "py-2 px-3.5 bg-white/10 hover:bg-white/20 text-indigo-100 rounded-xl text-xs font-bold transition border border-white/15 cursor-pointer flex items-center gap-1.5",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "هەمووی تۆمارە 👍" })]
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "هەمووی تۆمارە" })]
 						})]
 					})]
 				})
@@ -91219,44 +92058,54 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 									className: "flex items-center gap-2 flex-wrap",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 										className: "text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 flex items-center gap-1",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [noSpendDaysCount, " ڕۆژی بێ-خەرجی 🌟"] })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [noSpendDaysCount, " ڕۆژی بێ-خەرجی"] })]
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 										className: `text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 ${isTodayOver ? "bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800" : "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800"}`,
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-2 h-2 rounded-full ${isTodayOver ? "bg-amber-500 animate-pulse" : "bg-emerald-500"}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: isTodayOver ? "ڕاهێنەر: خەمت نەبێت 🌿" : "ئاستی سەلامەتی: نایابە 🛡️" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-2 h-2 rounded-full ${isTodayOver ? "bg-amber-500 animate-pulse" : "bg-emerald-500"}` }), isTodayOver ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "inline-flex items-center gap-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ڕاهێنەر: خەمت نەبێت" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Leaf, { className: "w-3.5 h-3.5 text-amber-600 dark:text-amber-400" })]
+										}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "inline-flex items-center gap-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئاستی سەلامەتی: نایابە" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" })]
+										})]
 									})]
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 								className: `p-3 rounded-2xl mb-3 border text-xs leading-relaxed ${isTodayOver ? "bg-amber-50/70 dark:bg-amber-950/30 border-amber-200/80 dark:border-amber-900/50 text-amber-900 dark:text-amber-200" : "bg-emerald-50/70 dark:bg-emerald-950/30 border-emerald-200/80 dark:border-emerald-900/50 text-emerald-900 dark:text-emerald-200"}`,
-								children: isTodayOver ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-									"🌿 ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { children: "ئارام بە، هیچ کێشەیەک نییە!" }),
-									" تێپەڕاندنی ڕۆژانە بەشێکە لە ژیانی سروشتی خێزان. ئەگەر لە ٣ ڕۆژی داهاتوودا ڕۆژانە بڕی",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("b", {
-										className: "font-mono font-bold",
-										children: [
-											fmt(Math.round((todaySpent - dailyAllowance) / 3)),
-											" ",
-											t("iqd")
-										]
-									}),
-									" کەمتر خەرج بکەیت، هاوسەنگی داراییەکەت بە تەواوی دەگەڕێتەوە شوێنی خۆی بەبێ ئەوەی هەست بە هیچ گوشارێک بکەیت."
-								] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-									"🛡️ ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { children: "دەستخۆش! هەنگاوەکانت زۆر زیرەکانەن." }),
-									" هێشتا بڕی",
-									" ",
-									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("b", {
-										className: "font-mono font-bold",
-										children: [
-											fmt(todayRemaining),
-											" ",
-											t("iqd")
-										]
-									}),
-									" لە باڵانسی ئارامی ئەمڕۆت ماوە. پاراستنی ئەم هاوسەنگییە دڵنیایی دەدات کە تا هاتنی مووچەی نوێ لە ئاسوودەیی داراییدا بیت."
-								] })
+								children: isTodayOver ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-start gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Leaf, { className: "w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { children: "ئارام بە، هیچ کێشەیەک نییە!" }),
+										" تێپەڕاندنی ڕۆژانە بەشێکە لە ژیانی سروشتی خێزان. ئەگەر لە ٣ ڕۆژی داهاتوودا ڕۆژانە بڕی",
+										" ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("b", {
+											className: "font-mono font-bold",
+											children: [
+												fmt(Math.round((todaySpent - dailyAllowance) / 3)),
+												" ",
+												t("iqd")
+											]
+										}),
+										" کەمتر خەرج بکەیت، هاوسەنگی داراییەکەت بە تەواوی دەگەڕێتەوە شوێنی خۆی بەبێ ئەوەی هەست بە هیچ گوشارێک بکەیت."
+									] })]
+								}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-start gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { children: "دەستخۆش! هەنگاوەکانت زۆر زیرەکانەن." }),
+										" هێشتا بڕی",
+										" ",
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("b", {
+											className: "font-mono font-bold",
+											children: [
+												fmt(todayRemaining),
+												" ",
+												t("iqd")
+											]
+										}),
+										" لە باڵانسی ئارامی ئەمڕۆت ماوە. پاراستنی ئەم هاوسەنگییە دڵنیایی دەدات کە تا هاتنی مووچەی نوێ لە ئاسوودەیی داراییدا بیت."
+									] })]
+								})
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "grid grid-cols-1 sm:grid-cols-3 gap-2.5 my-3.5",
@@ -91346,7 +92195,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 										] })]
 									}), peaceScore >= 75 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 										className: "inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200/80 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-200 text-[11px] font-bold",
-										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "مەدالیای هاوسەنگی 💎" })]
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Award, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "مەدالیای هاوسەنگی" })]
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 									type: "button",
@@ -91820,10 +92669,11 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 				currentMonth
 			}),
 			showPaydayModal && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150",
+				className: "fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "bg-white dark:bg-slate-900 rounded-3xl p-6 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in zoom-in-95 duration-150",
+					className: "bg-white dark:bg-slate-900 rounded-t-3xl sm:rounded-3xl p-6 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-bottom-5 sm:zoom-in-95 duration-150 pb-[max(24px,env(safe-area-inset-bottom))]",
 					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "w-12 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mx-auto mb-3 sm:hidden" }),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "flex items-center justify-between mb-4",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -91917,10 +92767,13 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 				defaultRate
 			}),
 			quickToast && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "fixed bottom-20 sm:bottom-6 start-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-4 py-2.5 bg-slate-900/95 dark:bg-white/95 text-white dark:text-slate-900 rounded-2xl shadow-2xl backdrop-blur-md border border-white/10 dark:border-slate-800 text-xs font-bold animate-in fade-in slide-in-from-bottom-3 duration-200",
+				className: "fixed bottom-24 sm:bottom-6 inset-x-0 mx-auto w-max max-w-[92vw] z-50 flex items-center gap-2.5 px-4 py-2.5 bg-slate-900/95 dark:bg-white/95 text-white dark:text-slate-900 rounded-2xl shadow-2xl backdrop-blur-md border border-white/10 dark:border-slate-800 text-xs font-bold animate-in fade-in slide-in-from-bottom-3 duration-200",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4 text-emerald-400 dark:text-emerald-600 shrink-0" }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: quickToast.message }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "truncate",
+						children: quickToast.message
+					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						type: "button",
 						onClick: () => {
@@ -91928,7 +92781,7 @@ var ExpensesTab = ({ currentMonth, doc, names, isLocked, langIndex, t, recurring
 							if (lastIdx >= 0) onDeleteExpense(lastIdx);
 							setQuickToast(null);
 						},
-						className: "ms-2 px-2.5 py-1 bg-white/20 dark:bg-black/10 hover:bg-white/30 rounded-lg text-emerald-300 dark:text-emerald-700 text-[11px] font-bold flex items-center gap-1 cursor-pointer",
+						className: "ms-1 px-2.5 py-1 bg-white/20 dark:bg-black/10 hover:bg-white/30 rounded-lg text-emerald-300 dark:text-emerald-700 text-[11px] font-bold flex items-center gap-1 cursor-pointer shrink-0",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RotateCcw, { className: "w-3 h-3" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "پاشگەزبوونەوە" })]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -119296,7 +120149,7 @@ var MonthlySummaryCard = ({ currentMonth, doc, names, langIndex, t }) => {
 	};
 	const generateSummaryText = () => {
 		const topLines = topCategories.map((c, i) => `${i + 1}. ${c.name}: ${fmt(c.spent)} IQD (${c.pct}%)`).join("\n");
-		return `📊 *${t("summary_month_title")} ${monthName} ${yearStr}*\n━━━━━━━━━━━━━━━━━━\n💰 *${t("inc")}:* ${fmt(totals.inc)} IQD\n🛒 *${t("exp")}:* ${fmt(totals.exp)} IQD\n💎 *${t("ns")}:* ${fmt(netSavings)} IQD (${savingsRatePct}%)\n\n🔥 *${t("bycat")}:*\n${topLines || t("none")}\n\n🎯 *50/30/20:*\n• ${t("needs_50") || "50% Needs"}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)\n• ${t("wants_30") || "30% Wants"}: ${fmt(ruleBreakdown.wants)} IQD (${ruleBreakdown.wantsPct}%)\n• ${t("savings_20") || "20% Savings"}: ${fmt(ruleBreakdown.savings)} IQD (${ruleBreakdown.savingsPct}%)\n\n✨ *Status:* ${statusBadge.text}\n📱 _Dahatu_`;
+		return `*${t("summary_month_title")} ${monthName} ${yearStr}*\n━━━━━━━━━━━━━━━━━━\n• *${t("inc")}:* ${fmt(totals.inc)} IQD\n• *${t("exp")}:* ${fmt(totals.exp)} IQD\n• *${t("ns")}:* ${fmt(netSavings)} IQD (${savingsRatePct}%)\n\n*${t("bycat")}:*\n${topLines || t("none")}\n\n*50/30/20:*\n• ${t("needs_50") || "50% Needs"}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)\n• ${t("wants_30") || "30% Wants"}: ${fmt(ruleBreakdown.wants)} IQD (${ruleBreakdown.wantsPct}%)\n• ${t("savings_20") || "20% Savings"}: ${fmt(ruleBreakdown.savings)} IQD (${ruleBreakdown.savingsPct}%)\n\n*Status:* ${statusBadge.text}\n_Dahatu_`;
 	};
 	const handleCopyWhatsApp = async () => {
 		try {
@@ -119422,7 +120275,7 @@ var MonthlySummaryCard = ({ currentMonth, doc, names, langIndex, t }) => {
 			ctx.stroke();
 			ctx.fillStyle = "#f8fafc";
 			ctx.font = "bold 20px \"Noto Sans Arabic\", sans-serif";
-			ctx.fillText(`🎯 ${t("pdf_rule_503020_title")}`, 730, 655);
+			ctx.fillText(t("pdf_rule_503020_title"), 730, 655);
 			ctx.fillStyle = "#94a3b8";
 			ctx.font = "16px \"Noto Sans Arabic\", sans-serif";
 			ctx.fillText(`• ${t("pdf_rule_needs")}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)`, 730, 695);
@@ -119947,27 +120800,27 @@ var FinancialPDFReportModal = ({ isOpen, onClose, currentMonth, doc, names, lang
 	}).filter((m) => !m.isDeleted && m.total > 0);
 	const generateTextReport = () => {
 		let text = `=====================================\n`;
-		text += `📑 ${t("pdf_official_doc")}: ${monthLabel}\n`;
+		text += `${t("pdf_official_doc")}: ${monthLabel}\n`;
 		text += `${t("wsm")}: ${activeWsTitle}\n`;
 		text += `${t("pdf_issue_date")}: ${nowFormatted}\n`;
 		text += `${t("pdf_fx_rate")}: $100 = ${fmt(defaultRate * 100)} IQD\n`;
 		text += `=====================================\n\n`;
-		text += `📊 ${t("pdf_summary_header")}:\n`;
+		text += `[ ${t("pdf_summary_header")} ]\n`;
 		text += `• ${t("inc")}: ${isLocked ? "••••••" : fmt(totals.inc)} IQD\n`;
 		text += `• ${t("exp")}: ${fmt(totals.exp)} IQD\n`;
 		text += `• ${t("ns")}: ${fmt(totals.sv)} IQD\n`;
 		text += `• ${t("rem")}: ${isLocked ? "••••••" : fmt(totals.rem)} IQD\n`;
 		text += `• ${t("rate")}: ${isLocked ? "••%" : `${Math.round(totals.savingsRate * 100)}%`}\n\n`;
-		text += `⚖️ ${t("pdf_rule_503020_title")}:\n`;
+		text += `[ ${t("pdf_rule_503020_title")} ]\n`;
 		text += `• ${t("pdf_rule_needs")}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)\n`;
 		text += `• ${t("pdf_rule_wants")}: ${fmt(ruleBreakdown.wants)} IQD (${ruleBreakdown.wantsPct}%)\n`;
 		text += `• ${t("pdf_rule_savings")}: ${fmt(ruleBreakdown.savings)} IQD (${ruleBreakdown.savingsPct}%)\n\n`;
-		text += `🏷️ ${t("pdf_cat_details")}:\n`;
+		text += `[ ${t("pdf_cat_details")} ]\n`;
 		categoryRows.slice(0, 10).forEach((c) => {
 			text += `• ${getCategoryName(c.cat, langIndex)}: ${fmt(c.spent)} IQD (${c.pctOfExp}%)\n`;
 		});
 		if (includeTransactions && (doc.tx || []).length > 0) {
-			text += `\n📝 ${t("pdf_transactions_title")} (${(doc.tx || []).length}):\n`;
+			text += `\n[ ${t("pdf_transactions_title")} (${(doc.tx || []).length}) ]\n`;
 			(doc.tx || []).forEach((tx) => {
 				const cName = getCategoryName(tx.c, langIndex) || t("exp");
 				const pName = members[tx.w]?.n || "";
@@ -123034,8 +123887,8 @@ var ReportsChartsSection = ({ currentYear, currentMonth, doc, yearDocs, defaultR
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex items-center justify-between text-[10px] text-slate-400 font-mono",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: item.budget > 0 ? item.variance >= 0 ? `ماوە: ${fmt(item.variance)} IQD` : `زیادەڕۆیی: ${fmt(Math.abs(item.variance))} IQD` : "بودجە دیاری نەکراوە" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "font-bold",
-											children: isOver ? "⚠️ بەزێنراو" : isNear ? "⚡ ئاگاداری" : "✓ ئاسایی"
+											className: "font-bold inline-flex items-center gap-1",
+											children: isOver ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, { className: "w-3 h-3 text-rose-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "بەزێنراو" })] }) : isNear ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-3 h-3 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئاگاداری" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-3 h-3 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئاسایی" })] })
 										})]
 									})]
 								})]
@@ -123175,8 +124028,8 @@ var SpendingHeatmapCalendar = ({ currentMonth, doc, names, defaultRate, dailyAll
 										]
 									})]
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "text-[11px] text-slate-500 dark:text-slate-400 mt-1",
-									children: noSpendCount >= 8 ? "🌟 نایابە! دەستگرتن بەسەر خەرجی بێپلاندا لە ئاستێکی زۆر بەرزدایە." : "ئامانج: لانی کەم ٨ ڕۆژ لە مانگدا بە بێ-خەرجی بهێڵەرەوە."
+									className: "text-[11px] text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1",
+									children: noSpendCount >= 8 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-emerald-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "نایابە! دەستگرتن بەسەر خەرجی بێپلاندا لە ئاستێکی زۆر بەرزدایە." })] }) : "ئامانج: لانی کەم ٨ ڕۆژ لە مانگدا بە بێ-خەرجی بهێڵەرەوە."
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -123250,7 +124103,10 @@ var SpendingHeatmapCalendar = ({ currentMonth, doc, names, defaultRate, dailyAll
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-500 flex items-center justify-between",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئامۆژگاری:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "لە کۆتایی هەفتەدا پلانەکە توندتر بکەرەوە 🛡️" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئامۆژگاری:" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "inline-flex items-center gap-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "لە کۆتایی هەفتەدا پلانەکە توندتر بکەرەوە" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShieldCheck, { className: "w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0" })]
+								})]
 							})
 						]
 					})
@@ -123273,8 +124129,8 @@ var SpendingHeatmapCalendar = ({ currentMonth, doc, names, defaultRate, dailyAll
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 									className: "flex items-center gap-1",
 									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-										className: "w-3 h-3 rounded-md bg-emerald-500/25 border border-emerald-500 text-emerald-600 flex items-center justify-center text-[8px] font-black",
-										children: "★"
+										className: "w-3 h-3 rounded-md bg-emerald-500/25 border border-emerald-500 text-emerald-600 flex items-center justify-center",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-2 h-2 fill-current" })
 									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "بێ-خەرجی (0)" })]
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
@@ -123329,9 +124185,9 @@ var SpendingHeatmapCalendar = ({ currentMonth, doc, names, defaultRate, dailyAll
 											children: day.dayNumber
 										}),
 										day.status === "no-spend" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-											className: "text-[10px] text-emerald-600 dark:text-emerald-400 font-bold",
+											className: "text-emerald-600 dark:text-emerald-400",
 											title: "ڕۆژی بێ-خەرجی",
-											children: "★"
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-3 h-3 fill-current" })
 										}),
 										day.isToday && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: "hidden sm:inline text-[9px] px-1 py-0.2 rounded-md bg-teal-500 text-white font-bold",
@@ -123405,11 +124261,11 @@ var SpendingHeatmapCalendar = ({ currentMonth, doc, names, defaultRate, dailyAll
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mt-3",
 					children: selectedDay.txs.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "py-6 text-center space-y-1",
+						className: "py-6 text-center space-y-1.5",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								className: "text-2xl",
-								children: "🌟"
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center mx-auto",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-5 h-5" })
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "text-xs font-bold text-emerald-600 dark:text-emerald-400",
@@ -124040,7 +124896,7 @@ var ReportsTab = ({ currentMonth, doc, names, isLocked, langIndex, monthNames, t
 						className: `py-2 px-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer col-span-2 sm:col-span-1 ${reportMode === "calendar" ? "bg-teal-600 text-white shadow-xs" : "text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/60"}`,
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Calendar, { className: "w-4 h-4 shrink-0 text-emerald-400" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "truncate",
-							children: "ڕۆژژمێری خەرجی 📅"
+							children: "ڕۆژژمێری خەرجی"
 						})]
 					})
 				]
@@ -125337,12 +126193,8 @@ var DebtProgressTracker = ({ currentMonth, debts, defaultRate, onAddDebt, onPayD
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "bg-teal-500/20 border border-teal-500/30 rounded-xl p-2.5 flex items-center justify-between gap-2",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-								className: "text-[11px] font-bold text-teal-200 block",
-								children: [
-									"⚡ ",
-									t("dbt_speedup"),
-									" (+50k IQD)"
-								]
+								className: "text-[11px] font-bold text-teal-200 flex items-center gap-1",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-3 h-3 text-amber-300 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [t("dbt_speedup"), " (+50k IQD)"] })]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 								className: "text-[10px] text-teal-100/90 block",
 								children: monthsSavedWithBoost > 0 ? `${monthsSavedWithBoost} ${t("dbt_months_left")} ${t("vsprev").split(" ")[0]}!` : t("dbt_snowball_tip").split("!")[0]
@@ -125420,17 +126272,23 @@ var DebtProgressTracker = ({ currentMonth, debts, defaultRate, onAddDebt, onPayD
 								type: "button",
 								onClick: () => setStrategyTab("snowball"),
 								className: `px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${strategyTab === "snowball" ? "bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-300 shadow-xs font-bold" : "text-slate-600 dark:text-slate-300 hover:text-slate-900"}`,
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["❄️ ", t("dbt_strat_snowball")] }), strategies.snowball.recommended && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.2 rounded-full font-bold",
-									children: "★"
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "flex items-center gap-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Snowflake, { className: "w-3.5 h-3.5 text-sky-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: t("dbt_strat_snowball") })]
+								}), strategies.snowball.recommended && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.5 rounded-full font-bold inline-flex items-center justify-center",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-2.5 h-2.5 fill-current" })
 								})]
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 								type: "button",
 								onClick: () => setStrategyTab("avalanche"),
 								className: `px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 ${strategyTab === "avalanche" ? "bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-300 shadow-xs font-bold" : "text-slate-600 dark:text-slate-300 hover:text-slate-900"}`,
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["⚡ ", t("dbt_strat_avalanche")] }), strategies.avalanche.recommended && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.2 rounded-full font-bold",
-									children: "★"
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+									className: "flex items-center gap-1",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Zap, { className: "w-3.5 h-3.5 text-amber-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: t("dbt_strat_avalanche") })]
+								}), strategies.avalanche.recommended && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.5 rounded-full font-bold inline-flex items-center justify-center",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-2.5 h-2.5 fill-current" })
 								})]
 							})]
 						})]
@@ -125469,13 +126327,8 @@ var DebtProgressTracker = ({ currentMonth, debts, defaultRate, onAddDebt, onPayD
 									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "flex items-center justify-between gap-1 mb-1.5",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: `text-[10px] font-black px-2 py-0.5 rounded-md ${idx === 0 ? "bg-white/20 text-white" : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300"}`,
-											children: [
-												"#",
-												step.order,
-												" ",
-												idx === 0 ? `🔥 ${t("debt_main_target")}` : ""
-											]
+											className: `text-[10px] font-black px-2 py-0.5 rounded-md inline-flex items-center gap-1 ${idx === 0 ? "bg-white/20 text-white" : "bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300"}`,
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["#", step.order] }), idx === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Flame, { className: "w-3 h-3 text-amber-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: t("debt_main_target") })] })]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 											className: `text-[10px] font-bold ${idx === 0 ? "text-indigo-100" : "text-slate-500"}`,
 											children: step.projectedMonth
@@ -125733,8 +126586,8 @@ var DebtProgressTracker = ({ currentMonth, debts, defaultRate, onAddDebt, onPayD
 											item.cu === "U" ? "$" : t("iqd")
 										] }),
 										payoffTargetMonth && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-											className: "bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-md font-bold",
-											children: ["🎯 ", payoffTargetMonth]
+											className: "bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-md font-bold inline-flex items-center gap-1",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Target, { className: "w-3 h-3 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: payoffTargetMonth })]
 										})
 									]
 								})]
@@ -126260,7 +127113,10 @@ var SavingsTab = ({ currentMonth, goals, deposits, onAddGoal, onUpdateGoal, onDe
 											]
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center gap-2 flex-wrap text-[11px] text-slate-400 pt-0.5",
-											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: isCompleted ? "ئامانجی گشتی تەواوبووە 🎉" : "لە کاردایە" }), deadlineInfo && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+												className: "inline-flex items-center gap-1",
+												children: isCompleted ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Trophy, { className: "w-3 h-3 text-emerald-500 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئامانجی گشتی تەواوبووە" })] }) : "لە کاردایە"
+											}), deadlineInfo && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 												className: `inline-flex items-center gap-1 font-mono font-medium px-2 py-0.5 rounded-md ${deadlineInfo.isOverdue ? "bg-red-50 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-900/60" : deadlineInfo.diffDays <= 30 ? "bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900/60" : "bg-slate-100 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300"}`,
 												children: [
 													/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CalendarClock, { className: "w-3 h-3" }),
@@ -126725,8 +127581,8 @@ var WealthTab = ({ currentMonth, wealth, debts, gold, names, averageMonthlyExpen
 							className: "text-xs uppercase tracking-wider font-semibold opacity-90",
 							children: t("hs")
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "text-xs bg-white/20 px-2.5 py-1 rounded-full font-bold",
-							children: health.score >= 80 ? "🌟 Excellent" : health.score >= 60 ? "👍 Good" : "⚠️ Fair"
+							className: "text-xs bg-white/20 px-2.5 py-1 rounded-full font-bold inline-flex items-center gap-1",
+							children: health.score >= 80 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Sparkles, { className: "w-3.5 h-3.5 text-amber-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Excellent" })] }) : health.score >= 60 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ThumbsUp, { className: "w-3.5 h-3.5 text-emerald-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Good" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TriangleAlert, { className: "w-3.5 h-3.5 text-amber-300" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Fair" })] })
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -128277,12 +129133,12 @@ var MoreTab = ({ currentMonth, fxRate, sinkingFunds = [], onAddSinkingFund, onDe
 												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 													className: "text-xs",
 													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-														className: "font-bold text-emerald-800 dark:text-emerald-300 block",
-														children: [
+														className: "font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(PartyPopper, { className: "w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
 															"ئەمرۆ نۆرەی تۆیە لەم مانگەدا (",
 															currentMonth,
-															")! 🎉"
-														]
+															")!"
+														] })]
 													}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 														className: "text-emerald-600 dark:text-emerald-400 text-[11px]",
 														children: [
@@ -128300,7 +129156,7 @@ var MoreTab = ({ currentMonth, fxRate, sinkingFunds = [], onAddSinkingFund, onDe
 											}),
 											k.rc === 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 												className: "text-xs text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "کاسەی ئەم کۆمەڵەیە وەرگیراوە و خراوەتە ناو داهاتەوە ✓" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "کاسەی ئەم کۆمەڵەیە وەرگیراوە و خراوەتە ناو داهاتەوە" })]
 											}),
 											/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 												className: "pt-1",
@@ -128319,7 +129175,11 @@ var MoreTab = ({ currentMonth, fxRate, sinkingFunds = [], onAddSinkingFund, onDe
 															disabled: isPaid,
 															className: `py-1 px-2 rounded-lg text-[10px] font-mono font-bold flex items-center gap-1 transition ${isPaid ? "bg-purple-600 text-white cursor-default" : isMine ? "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-300 hover:bg-amber-200" : "bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-300"}`,
 															title: `${stepMonth} - ${isPaid ? "دراوە" : "نەدراوە"}`,
-															children: [isPaid && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-2.5 h-2.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [stepMonth.slice(5), isMine ? " ⭐" : ""] })]
+															children: [
+																isPaid && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-2.5 h-2.5" }),
+																/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: stepMonth.slice(5) }),
+																isMine && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Star, { className: "w-2.5 h-2.5 fill-amber-500 text-amber-500 shrink-0" })
+															]
 														}, stepIdx);
 													})
 												})]
@@ -129280,7 +130140,7 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 											className: "flex items-center gap-2",
 											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
 												className: "text-xs font-bold text-teal-900 dark:text-teal-200 flex items-center gap-1.5",
-												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-2.5 h-2.5 rounded-full ${notifPermission === "granted" ? "bg-emerald-500" : "bg-amber-500 animate-pulse"}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: notifPermission === "granted" ? "ئاگادارییەکانی مۆبایل و براوسەر ڕێگەپێدراون 🟢" : "ڕێگەپێدانی ئاگاداری مۆبایل پێویستە" })]
+												children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `w-2.5 h-2.5 rounded-full ${notifPermission === "granted" ? "bg-emerald-500" : "bg-amber-500 animate-pulse"}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: notifPermission === "granted" ? "ئاگادارییەکانی مۆبایل و براوسەر ڕێگەپێدراون" : "ڕێگەپێدانی ئاگاداری مۆبایل پێویستە" })]
 											})
 										}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 											className: "flex items-center gap-2",
@@ -129296,7 +130156,7 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 												type: "button",
 												onClick: handleTestNotification,
 												className: "py-1.5 px-3 rounded-xl bg-white dark:bg-slate-800 border border-teal-300 dark:border-teal-700 text-teal-700 dark:text-teal-300 hover:bg-teal-50 text-xs font-bold transition flex items-center gap-1 cursor-pointer",
-												children: testNotifSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "نێردرا! ✓" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BellRing, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "تێستی ئاگاداری" })] })
+												children: testNotifSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5 text-emerald-500" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "نێردرا!" })] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(BellRing, { className: "w-3.5 h-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "تێستی ئاگاداری" })] })
 											})]
 										})]
 									}),
@@ -129571,48 +130431,92 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 								})] })]
 							})
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
-							className: "block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2",
-							children: "شێوازی ڕووکار:"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "grid grid-cols-2 sm:grid-cols-4 gap-2.5",
-							children: [
-								{
-									id: "light",
-									label: "ڕووناک (Light)",
-									icon: Sun
-								},
-								{
-									id: "dark",
-									label: "تاریک (Dark)",
-									icon: Moon
-								},
-								{
-									id: "neon",
-									label: "نیۆن (Neon Cyber)",
-									icon: Sparkles
-								},
-								{
-									id: "auto",
-									label: "خۆکار (System)",
-									icon: Laptop
-								}
-							].map(({ id, label, icon: Icon }) => {
-								const isSelected = (settings.th || "auto") === id;
-								return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
-									type: "button",
-									onClick: () => {
-										if (id === "neon" && (!settings.ac || settings.ac === "#0f766e")) onUpdateSettings({
-											th: "neon",
-											ac: "#06b6d4"
-										});
-										else onUpdateSettings({ th: id });
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+								className: "block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2",
+								children: "شێوازی ڕووکار:"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "grid grid-cols-2 sm:grid-cols-5 gap-2",
+								children: [
+									{
+										id: "light",
+										label: "ڕووناک (Light)",
+										icon: Sun
 									},
-									className: `py-2.5 px-3 rounded-xl text-xs font-bold border transition flex items-center justify-center gap-2 cursor-pointer ${isSelected ? id === "neon" ? "bg-cyan-500/20 text-cyan-300 border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.45)]" : "bg-teal-600 text-white border-teal-600 shadow-xs" : "bg-slate-50 dark:bg-slate-900/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"}`,
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "w-4 h-4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: label })]
-								}, id);
+									{
+										id: "dark",
+										label: "تاریک (Dark)",
+										icon: Moon
+									},
+									{
+										id: "oled",
+										label: "ڕەشی تەواو (OLED)",
+										icon: Smartphone
+									},
+									{
+										id: "neon",
+										label: "نیۆن (Neon)",
+										icon: Sparkles
+									},
+									{
+										id: "auto",
+										label: "خۆکار (System)",
+										icon: Laptop
+									}
+								].map(({ id, label, icon: Icon }) => {
+									const isSelected = (settings.th || "auto") === id;
+									return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+										type: "button",
+										onClick: () => {
+											haptics.selection();
+											if (id === "neon" && (!settings.ac || settings.ac === "#0f766e")) onUpdateSettings({
+												th: "neon",
+												ac: "#06b6d4"
+											});
+											else onUpdateSettings({ th: id });
+										},
+										className: `py-2.5 px-2.5 rounded-xl text-[11px] sm:text-xs font-bold border transition flex items-center justify-center gap-1.5 cursor-pointer ${isSelected ? id === "neon" ? "bg-cyan-500/20 text-cyan-300 border-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.45)]" : id === "oled" ? "bg-black text-white border-emerald-500 shadow-md ring-1 ring-emerald-500/50" : "bg-teal-600 text-white border-teal-600 shadow-xs" : "bg-slate-50 dark:bg-slate-900/60 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"}`,
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, { className: "w-4 h-4 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: "truncate",
+											children: label
+										})]
+									}, id);
+								})
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-[10px] text-slate-400 mt-1.5",
+								children: "دۆخی (OLED) ڕەشی تەواوە (#000000) بۆ مۆبایلە شاشە AMOLEDەکان، باتری دەپارێزێت و چاو ئارام دەکات."
 							})
-						})] }),
+						] }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between gap-3",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex items-center gap-2.5",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Smartphone, { className: "w-4 h-4" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs font-bold text-slate-800 dark:text-slate-100 block",
+									children: "لەرینەوەی پەنجە (Haptic Feedback)"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-[10px] text-slate-400 block",
+									children: "لەرینەوەیەکی نەرم لە کاتی تۆمارکردنی خەرجی و گۆڕینی بەشەکان"
+								})] })]
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+								type: "button",
+								role: "switch",
+								"aria-checked": settings.haptics !== false,
+								onClick: () => {
+									const next = settings.haptics === false;
+									haptics.setEnabled(next);
+									if (next) haptics.medium();
+									onUpdateSettings({ haptics: next });
+								},
+								className: `relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${settings.haptics !== false ? "bg-teal-600" : "bg-slate-300 dark:bg-slate-700"}`,
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: `pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${settings.haptics !== false ? "rtl:-translate-x-5 ltr:translate-x-5" : "translate-x-0"}` })
+							})]
+						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "pt-3 border-t border-slate-100 dark:border-slate-700 space-y-3",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
@@ -129624,7 +130528,10 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 									const isCurrent = (settings.ac || "#0f766e").toLowerCase() === color.toLowerCase();
 									return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 										type: "button",
-										onClick: () => onUpdateSettings({ ac: color }),
+										onClick: () => {
+											haptics.selection();
+											onUpdateSettings({ ac: color });
+										},
 										style: { backgroundColor: color },
 										className: `w-8 h-8 rounded-full border-2 transition cursor-pointer ${isCurrent ? "border-white ring-3 ring-cyan-400 scale-110 shadow-md" : "border-transparent hover:scale-105"}`,
 										title: color
@@ -129952,9 +130859,9 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 												dir: "ltr"
 											})
 										}),
-										/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-											className: "text-[11px] text-slate-500 dark:text-slate-400",
-											children: "💡 ئەم کۆدە هەموو مووچە، خەرجییەکان، ئامانجەکانی پاشەکەوت، زێڕ، و قەرزەکانت لەخۆدەگرێت. دەتوانیت لە خوارەوە یاخود لە هەر ئامێرێکی تر پەیستی بکەیتەوە بۆ دەستبەجێ بەردەوامبوون."
+										/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+											className: "text-[11px] text-slate-500 dark:text-slate-400 flex items-start gap-1.5",
+											children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Lightbulb, { className: "w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "ئەم کۆدە هەموو مووچە، خەرجییەکان، ئامانجەکانی پاشەکەوت، زێڕ، و قەرزەکانت لەخۆدەگرێت. دەتوانیت لە خوارەوە یاخود لە هەر ئامێرێکی تر پەیستی بکەیتەوە بۆ دەستبەجێ بەردەوامبوون." })]
 										})
 									]
 								})]
@@ -130058,7 +130965,7 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 									type: "button",
 									onClick: () => setShowFabMenu(false),
 									className: "text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-0.5 rounded cursor-pointer",
-									children: "✕"
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X$1, { className: "w-3.5 h-3.5" })
 								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
@@ -130138,7 +131045,10 @@ var SettingsTab = ({ currentMonth, doc, names, settings, isLocked, t, onUpdateIn
 								onClick: handleExportAll,
 								className: "flex items-center gap-2 py-2.5 ps-4 pe-3 font-extrabold text-xs sm:text-sm tracking-wide cursor-pointer transition-transform active:scale-95",
 								title: "Export All Data (هەناردەکردنی هەموو داتاکان)",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: `w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:-translate-y-0.5 ${exportedSuccess ? "animate-bounce text-emerald-200" : ""}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: exportedSuccess ? "داگیرا ✓" : "Export All Data" })]
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Download, { className: `w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:-translate-y-0.5 ${exportedSuccess ? "animate-bounce text-emerald-200" : ""}` }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "inline-flex items-center gap-1",
+									children: exportedSuccess ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "داگیرا" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Check, { className: "w-3.5 h-3.5" })] }) : "Export All Data"
+								})]
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-5 w-px bg-white/20" }),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
@@ -140113,7 +141023,7 @@ var WebChannel;
 var EventType;
 var ErrorCode;
 var Stat;
-var Event;
+var Event$1;
 var getStatEventTarget;
 var createWebChannelTransport;
 (function() {
@@ -142148,7 +143058,7 @@ var createWebChannelTransport;
 	getStatEventTarget = webchannel_blob_es2018.getStatEventTarget = function() {
 		return jb();
 	};
-	Event = webchannel_blob_es2018.Event = I;
+	Event$1 = webchannel_blob_es2018.Event = I;
 	Stat = webchannel_blob_es2018.Stat = {
 		jb: 0,
 		mb: 1,
@@ -155468,7 +156378,7 @@ var __PRIVATE_WebChannelConnection = class __PRIVATE_WebChannelConnection extend
 	* Initialize STAT_EVENT listener once. Subsequent calls are a no-op.
 	* getStatEventTarget() returns the same target every time.
 	*/ static Mn() {
-		if (!__PRIVATE_WebChannelConnection.Nn) __PRIVATE_unguardedEventListen(getStatEventTarget(), Event.STAT_EVENT, ((e) => {
+		if (!__PRIVATE_WebChannelConnection.Nn) __PRIVATE_unguardedEventListen(getStatEventTarget(), Event$1.STAT_EVENT, ((e) => {
 			e.stat === Stat.PROXY ? __PRIVATE_logDebug(Gt, "STAT_EVENT: detected buffering proxy") : e.stat === Stat.NOPROXY && __PRIVATE_logDebug(Gt, "STAT_EVENT: detected no buffering proxy");
 		})), __PRIVATE_WebChannelConnection.Nn = true;
 	}
@@ -170282,7 +171192,7 @@ var CloudSyncModal = ({ isOpen, onClose, user, workspaceId, workspaceName, usdRa
 		setStatusMsg(null);
 		try {
 			await saveCloudBackup(`${user.uid}_${workspaceId || "main"}`, workspaceName, getFullBackupPayload());
-			setStatusMsg("هەموو زانیارییەکان بە سەرکەوتوویی لە هەور پاشەکەوت کران ☁️");
+			setStatusMsg("هەموو زانیارییەکان بە سەرکەوتوویی لە هەور پاشەکەوت کران");
 			await fetchBackups();
 		} catch (err) {
 			setErrorMsg(err instanceof Error ? err.message : "هەڵە لە پاشەکەوتکردن");
@@ -170296,7 +171206,7 @@ var CloudSyncModal = ({ isOpen, onClose, user, workspaceId, workspaceName, usdRa
 		setStatusMsg(null);
 		try {
 			await onRestoreBackup(JSON.parse(record.payload));
-			setStatusMsg(`پاشەکەوتی "${record.workspaceName}" بە سەرکەوتوویی گەڕێندرایەوە ✅`);
+			setStatusMsg(`پاشەکەوتی "${record.workspaceName}" بە سەرکەوتوویی گەڕێندرایەوە`);
 		} catch (err) {
 			setErrorMsg(err instanceof Error ? err.message : "هەڵە لە گەڕاندنەوەی زانیارییەکان");
 		} finally {
@@ -170473,7 +171383,7 @@ var CloudSyncModal = ({ isOpen, onClose, user, workspaceId, workspaceName, usdRa
 												await onRestoreBackup(payload);
 											});
 											setIsFamilyLive(true);
-											setStatusMsg(`هاوبەشکردنی خێزان بە کۆدی ${familyCode.trim()} چالاک کرا! 👨‍👩‍👧‍👦`);
+											setStatusMsg(`هاوبەشکردنی خێزان بە کۆدی ${familyCode.trim()} چالاک کرا!`);
 										} catch (err) {
 											setErrorMsg(err instanceof Error ? err.message : "هەڵە لە هاوبەشکردنی خێزان");
 										} finally {
@@ -170495,7 +171405,7 @@ var CloudSyncModal = ({ isOpen, onClose, user, workspaceId, workspaceName, usdRa
 									setErrorMsg(null);
 									try {
 										onUpdateFxRates(await fetchLiveGlobalFxRates(usdRate));
-										setStatusMsg("نرخی دراوە جیهانییەکان (EUR, GBP, TRY, SAR, IRR) نوێکرایەوە 🌍");
+										setStatusMsg("نرخی دراوە جیهانییەکان (EUR, GBP, TRY, SAR, IRR) نوێکرایەوە");
 									} catch {
 										setErrorMsg("نەتوانرا نرخی دراوەکان لە ئینتەرنێت بهێنرێت");
 									} finally {
@@ -171054,10 +171964,13 @@ function App() {
 		root.style.setProperty("--ac-rgb", `${r}, ${g}, ${b}`);
 		root.style.setProperty("--ac-soft", `rgba(${r}, ${g}, ${b}, 0.14)`);
 		root.style.setProperty("--ac-glow", `rgba(${r}, ${g}, ${b}, 0.45)`);
-		root.classList.remove("dark", "theme-neon");
+		root.classList.remove("dark", "theme-neon", "theme-oled");
 		if (settings.th === "neon") {
 			root.classList.add("dark", "theme-neon");
 			root.dataset.theme = "neon";
+		} else if (settings.th === "oled") {
+			root.classList.add("dark", "theme-oled");
+			root.dataset.theme = "oled";
 		} else if (settings.th === "dark") {
 			root.classList.add("dark");
 			root.dataset.theme = "dark";
@@ -171066,6 +171979,7 @@ function App() {
 			root.removeAttribute("data-theme");
 			if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) root.classList.add("dark");
 		}
+		haptics.setEnabled(settings.haptics !== false);
 		const ui = settings.ui || {};
 		if (ui.fs) root.style.setProperty("--fs", `${ui.fs}px`);
 		if (ui.r !== void 0) {
@@ -171119,9 +172033,10 @@ function App() {
 		}));
 		const alertResult = checkAndDispatchBudgetAlert(tx, monthDoc, names, currentMonth, settings.l ?? 0);
 		if (alertResult?.triggered) {
+			haptics.warning();
 			setActiveBudgetAlert(alertResult);
 			setTimeout(() => setActiveBudgetAlert(null), 6500);
-		}
+		} else haptics.success();
 		if (repeatMonthly) {
 			const newRec = {
 				c: tx.c,
@@ -171154,6 +172069,7 @@ function App() {
 		}
 	};
 	const handleDeleteExpense = (idx) => {
+		haptics.warning();
 		const target = monthDoc.tx[idx];
 		if (target) setLastDeletedTx(target);
 		updateMonthDoc((prev) => {
@@ -171223,6 +172139,7 @@ function App() {
 		});
 	};
 	const handleDepositGoal = (goalIdx, depositAmount) => {
+		haptics.success();
 		const today = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
 		setGoals((prev) => {
 			const updated = [...prev];
@@ -171838,7 +172755,7 @@ function App() {
 					onOpenAiAdvisor: () => setIsAiAdvisorOpen(true)
 				}),
 				activeBudgetAlert && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "fixed top-18 start-1/2 -translate-x-1/2 z-50 w-11/12 max-w-md p-3.5 rounded-2xl bg-slate-900/95 dark:bg-slate-800/95 text-white shadow-2xl backdrop-blur-md border border-amber-500/40 animate-in fade-in slide-in-from-top-3 duration-200",
+					className: "fixed top-4 inset-x-0 mx-auto z-50 w-11/12 max-w-md p-3.5 rounded-2xl bg-slate-900/95 dark:bg-slate-800/95 text-white shadow-2xl backdrop-blur-md border border-amber-500/40 animate-in fade-in slide-in-from-top-3 duration-200",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex items-start gap-3",
 						children: [
@@ -172165,3 +173082,4 @@ function App() {
 //#region src/main.tsx
 (0, import_client.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ (0, import_jsx_runtime.jsx)(App, {}));
 //#endregion
+export { NotificationType as n, WebPlugin as r, ImpactStyle as t };

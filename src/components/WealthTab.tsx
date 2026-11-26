@@ -13,7 +13,9 @@ import {
   TrendingDown,
   X,
   CreditCard,
-  PiggyBank
+  PiggyBank,
+  Sparkles,
+  ThumbsUp
 } from 'lucide-react';
 import { WealthData, DebtItem, GoldItem, NamesConfig, AssetItem, SavingsGoal, SavingsDeposit } from '../types';
 import {
@@ -270,8 +272,23 @@ export const WealthTab: React.FC<WealthTabProps> = ({
               <span className="text-xs uppercase tracking-wider font-semibold opacity-90">
                 {t('hs')}
               </span>
-          <span className="text-xs bg-white/20 px-2.5 py-1 rounded-full font-bold">
-            {health.score >= 80 ? '🌟 Excellent' : health.score >= 60 ? '👍 Good' : '⚠️ Fair'}
+          <span className="text-xs bg-white/20 px-2.5 py-1 rounded-full font-bold inline-flex items-center gap-1">
+            {health.score >= 80 ? (
+              <>
+                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <span>Excellent</span>
+              </>
+            ) : health.score >= 60 ? (
+              <>
+                <ThumbsUp className="w-3.5 h-3.5 text-emerald-300" />
+                <span>Good</span>
+              </>
+            ) : (
+              <>
+                <AlertTriangle className="w-3.5 h-3.5 text-amber-300" />
+                <span>Fair</span>
+              </>
+            )}
           </span>
         </div>
 

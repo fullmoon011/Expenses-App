@@ -19,7 +19,9 @@ import {
   Sliders,
   DollarSign,
   ShieldCheck,
-  Flame
+  Flame,
+  Snowflake,
+  Star
 } from 'lucide-react';
 import { DebtItem, CurrencyType } from '../types';
 import {
@@ -261,8 +263,9 @@ export const DebtProgressTracker: React.FC<DebtProgressTrackerProps> = ({
             {/* Payoff accelerator teaser */}
             <div className="bg-teal-500/20 border border-teal-500/30 rounded-xl p-2.5 flex items-center justify-between gap-2">
               <div>
-                <span className="text-[11px] font-bold text-teal-200 block">
-                  ⚡ {t('dbt_speedup')} (+50k IQD)
+                <span className="text-[11px] font-bold text-teal-200 flex items-center gap-1">
+                  <Zap className="w-3 h-3 text-amber-300 shrink-0" />
+                  <span>{t('dbt_speedup')} (+50k IQD)</span>
                 </span>
                 <span className="text-[10px] text-teal-100/90 block">
                   {monthsSavedWithBoost > 0
@@ -352,10 +355,13 @@ export const DebtProgressTracker: React.FC<DebtProgressTrackerProps> = ({
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
                 }`}
               >
-                <span>❄️ {t('dbt_strat_snowball')}</span>
+                <span className="flex items-center gap-1">
+                  <Snowflake className="w-3.5 h-3.5 text-sky-500" />
+                  <span>{t('dbt_strat_snowball')}</span>
+                </span>
                 {strategies.snowball.recommended && (
-                  <span className="text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.2 rounded-full font-bold">
-                    ★
+                  <span className="text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.5 rounded-full font-bold inline-flex items-center justify-center">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                   </span>
                 )}
               </button>
@@ -368,10 +374,13 @@ export const DebtProgressTracker: React.FC<DebtProgressTrackerProps> = ({
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
                 }`}
               >
-                <span>⚡ {t('dbt_strat_avalanche')}</span>
+                <span className="flex items-center gap-1">
+                  <Zap className="w-3.5 h-3.5 text-amber-500" />
+                  <span>{t('dbt_strat_avalanche')}</span>
+                </span>
                 {strategies.avalanche.recommended && (
-                  <span className="text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.2 rounded-full font-bold">
-                    ★
+                  <span className="text-[9px] bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-200 px-1.5 py-0.5 rounded-full font-bold inline-flex items-center justify-center">
+                    <Star className="w-2.5 h-2.5 fill-current" />
                   </span>
                 )}
               </button>
@@ -411,13 +420,19 @@ export const DebtProgressTracker: React.FC<DebtProgressTrackerProps> = ({
                 >
                   <div className="flex items-center justify-between gap-1 mb-1.5">
                     <span
-                      className={`text-[10px] font-black px-2 py-0.5 rounded-md ${
+                      className={`text-[10px] font-black px-2 py-0.5 rounded-md inline-flex items-center gap-1 ${
                         idx === 0
                           ? 'bg-white/20 text-white'
                           : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
                       }`}
                     >
-                      #{step.order} {idx === 0 ? `🔥 ${t('debt_main_target')}` : ''}
+                      <span>#{step.order}</span>
+                      {idx === 0 && (
+                        <>
+                          <Flame className="w-3 h-3 text-amber-300" />
+                          <span>{t('debt_main_target')}</span>
+                        </>
+                      )}
                     </span>
                     <span
                       className={`text-[10px] font-bold ${
@@ -687,8 +702,9 @@ export const DebtProgressTracker: React.FC<DebtProgressTrackerProps> = ({
                         {fmt(item.m)} {item.cu === 'U' ? '$' : t('iqd')}
                       </b>
                       {payoffTargetMonth && (
-                        <span className="bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-md font-bold">
-                          🎯 {payoffTargetMonth}
+                        <span className="bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 px-1.5 py-0.5 rounded-md font-bold inline-flex items-center gap-1">
+                          <Target className="w-3 h-3 shrink-0" />
+                          <span>{payoffTargetMonth}</span>
                         </span>
                       )}
                     </div>

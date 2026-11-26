@@ -377,8 +377,11 @@ export default function App() {
       settings.l ?? 0
     );
     if (alertResult?.triggered) {
+      haptics.warning();
       setActiveBudgetAlert(alertResult);
       setTimeout(() => setActiveBudgetAlert(null), 6500);
+    } else {
+      haptics.success();
     }
 
     if (repeatMonthly) {
@@ -421,6 +424,7 @@ export default function App() {
 
   // Delete Expense
   const handleDeleteExpense = (idx: number) => {
+    haptics.warning();
     const target = monthDoc.tx[idx];
     if (target) setLastDeletedTx(target);
     updateMonthDoc((prev) => {
@@ -490,6 +494,7 @@ export default function App() {
   };
 
   const handleDepositGoal = (goalIdx: number, depositAmount: number) => {
+    haptics.success();
     const today = new Date().toISOString().slice(0, 10);
     // 1. Update Goal saved amount
     setGoals((prev) => {
@@ -1119,7 +1124,7 @@ export default function App() {
 
         {/* Floating Category Budget Limit Alert Toast */}
         {activeBudgetAlert && (
-          <div className="fixed top-18 start-1/2 -translate-x-1/2 z-50 w-11/12 max-w-md p-3.5 rounded-2xl bg-slate-900/95 dark:bg-slate-800/95 text-white shadow-2xl backdrop-blur-md border border-amber-500/40 animate-in fade-in slide-in-from-top-3 duration-200">
+          <div className="fixed top-4 inset-x-0 mx-auto z-50 w-11/12 max-w-md p-3.5 rounded-2xl bg-slate-900/95 dark:bg-slate-800/95 text-white shadow-2xl backdrop-blur-md border border-amber-500/40 animate-in fade-in slide-in-from-top-3 duration-200">
             <div className="flex items-start gap-3">
               <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${
                 activeBudgetAlert.urgent ? 'bg-rose-500/20 text-rose-400' : 'bg-amber-500/20 text-amber-400'

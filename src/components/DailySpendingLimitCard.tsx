@@ -7,7 +7,8 @@ import {
   TrendingDown,
   TrendingUp,
   Sparkles,
-  Coins
+  Coins,
+  Lightbulb
 } from 'lucide-react';
 import { fmt, val } from '../utils/calculations';
 import { MonthDoc } from '../types';
@@ -222,8 +223,9 @@ export const DailySpendingLimitCard: React.FC<DailySpendingLimitCardProps> = ({
       )}
 
       {totalBudget === 0 && (
-        <div className="text-[11px] text-slate-400 text-center pt-2">
-          💡 {t('dsl_no_budget_tip')}
+        <div className="text-[11px] text-slate-400 text-center pt-2 flex items-center justify-center gap-1.5">
+          <Lightbulb className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+          <span>{t('dsl_no_budget_tip')}</span>
         </div>
       )}
     </div>

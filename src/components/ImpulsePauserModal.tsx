@@ -11,7 +11,8 @@ import {
   Gift,
   HelpCircle,
   Flame,
-  ShoppingBag
+  ShoppingBag,
+  PartyPopper
 } from 'lucide-react';
 import { ExpenseTx, ImpulseItem } from '../types';
 import { CATEGORIES, getCategoryName } from '../constants/categories';
@@ -191,8 +192,9 @@ export const ImpulsePauserModal: React.FC<ImpulsePauserModalProps> = ({
               <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
                 کۆی پارەی ڕزگارکراو لە کڕینی هەڵەشەیی:
               </span>
-              <b className="text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono">
-                {fmt(totalSaved)} د.ع 🎉
+              <b className="text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono inline-flex items-center gap-1.5">
+                <span>{fmt(totalSaved)} د.ع</span>
+                <PartyPopper className="w-4 h-4 text-emerald-500" />
               </b>
             </div>
           )}
@@ -285,9 +287,10 @@ export const ImpulsePauserModal: React.FC<ImpulsePauserModalProps> = ({
 
             <button
               type="submit"
-              className="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs transition shadow-2xs cursor-pointer"
+              className="w-full py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl font-bold text-xs transition shadow-2xs cursor-pointer flex items-center justify-center gap-1.5"
             >
-              دەستپێکردنی مۆڵەتی ٢٤ کاتژمێری ئارامبوونەوە ⏳
+              <Clock className="w-3.5 h-3.5" />
+              <span>دەستپێکردنی مۆڵەتی ٢٤ کاتژمێری ئارامبوونەوە</span>
             </button>
           </form>
         )}
@@ -355,7 +358,7 @@ export const ImpulsePauserModal: React.FC<ImpulsePauserModalProps> = ({
                       className="py-1.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-2xs cursor-pointer"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>پێویستم پێی نییە! (پاشەکەوتکرا 🎉)</span>
+                      <span>پێویستم پێی نییە! (پاشەکەوتکرا)</span>
                     </button>
 
                     <button

@@ -429,20 +429,27 @@ export const exportStandaloneHTML = async (
         <h1 class="text-xl font-black">داهاتوو - سیستەمی دارایی و خەرجییەکان (${currentYear})</h1>
         <p class="text-xs text-teal-200">فایلی خۆبژێوی HTML - تەواوی پاشەکەوت و خەرجییەکانت</p>
       </div>
-      <button onclick="window.print()" class="no-print px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold transition">
-        🖨️ چاپکردن
+      <button onclick="window.print()" class="no-print px-4 py-2 bg-white/20 hover:bg-white/30 rounded-xl text-xs font-bold transition inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <span>چاپکردن</span>
       </button>
     </header>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="metrics-grid"></div>
 
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-3">
-      <h2 class="text-base font-bold text-teal-800">🎯 ئامانجەکانی پاشەکەوت</h2>
+      <h2 class="text-base font-bold text-teal-800 flex items-center gap-2">
+        <svg class="w-4 h-4 text-teal-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        <span>ئامانجەکانی پاشەکەوت</span>
+      </h2>
       <div id="goals-container" class="space-y-3"></div>
     </div>
 
     <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-3">
-      <h2 class="text-base font-bold text-slate-800">💸 خەرجییەکانی مانگ</h2>
+      <h2 class="text-base font-bold text-slate-800 flex items-center gap-2">
+        <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+        <span>خەرجییەکانی مانگ</span>
+      </h2>
       <div class="overflow-x-auto">
         <table class="w-full text-xs text-start">
           <thead>

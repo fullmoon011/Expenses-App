@@ -610,7 +610,16 @@ export const SavingsTab: React.FC<SavingsTabProps> = ({
                       </div>
 
                       <div className="flex items-center gap-2 flex-wrap text-[11px] text-slate-400 pt-0.5">
-                        <span>{isCompleted ? 'ئامانجی گشتی تەواوبووە 🎉' : 'لە کاردایە'}</span>
+                        <span className="inline-flex items-center gap-1">
+                          {isCompleted ? (
+                            <>
+                              <Trophy className="w-3 h-3 text-emerald-500 shrink-0" />
+                              <span>ئامانجی گشتی تەواوبووە</span>
+                            </>
+                          ) : (
+                            'لە کاردایە'
+                          )}
+                        </span>
 
                         {/* Deadline Badge */}
                         {deadlineInfo && (

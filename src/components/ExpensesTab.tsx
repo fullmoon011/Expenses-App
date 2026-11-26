@@ -44,11 +44,15 @@ import {
   Scale,
   CalendarCheck,
   Flame,
-  Award
+  Award,
+  Leaf,
+  ThumbsUp,
+  Utensils
 } from 'lucide-react';
 import { ExpenseTx, MonthDoc, NamesConfig, RecurringExpense, SavingsGoal } from '../types';
 import { CATEGORIES, getCategoryName } from '../constants/categories';
 import { val, fmt, fa, calcMonthTotals } from '../utils/calculations';
+import { haptics } from '../utils/haptics';
 import { CategoryIcon } from './CategoryIcon';
 import { AddExpenseModal } from './AddExpenseModal';
 import { VoiceExpenseModal } from './VoiceExpenseModal';
@@ -342,12 +346,12 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
   const peaceScore = Math.min(100, Math.max(10, Math.round(budgetPts + savingsPts + wantsPts)));
 
   const peaceTier = peaceScore >= 80
-    ? { label: 'نایاب 🌿', color: 'bg-emerald-400' }
+    ? { label: 'نایاب', icon: <Leaf className="w-3 h-3 text-emerald-400" />, color: 'bg-emerald-400' }
     : peaceScore >= 60
-    ? { label: 'باش 👍', color: 'bg-teal-400' }
+    ? { label: 'باش', icon: <ThumbsUp className="w-3 h-3 text-teal-400" />, color: 'bg-teal-400' }
     : peaceScore >= 40
-    ? { label: 'ئاگاداری ⚠️', color: 'bg-amber-400' }
-    : { label: 'پێویست بە ئارامی 🧘', color: 'bg-rose-400' };
+    ? { label: 'ئاگاداری', icon: <AlertTriangle className="w-3 h-3 text-amber-400" />, color: 'bg-amber-400' }
+    : { label: 'پێویست بە ئارامی', icon: <HeartPulse className="w-3 h-3 text-rose-400" />, color: 'bg-rose-400' };
 
   // Daily Tracking Metrics (Today's safe allowance & actual spending)
   const todayStr = new Date().toISOString().slice(0, 10);
@@ -362,6 +366,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
   // 1-Tap Daily Favorites Quick Logger
   const handle1TapExpense = (item: { label: string; amount: number; cat: number }) => {
     if (doc.closed) return;
+    haptics.success();
     const newTx: ExpenseTx = {
       c: item.cat,
       d: todayStr,
@@ -443,7 +448,11 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
                 className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-xs font-medium text-emerald-200"
               >
                 <HeartPulse className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-                <span>ئارامی: {peaceTier.label} (%{peaceScore})</span>
+                <span className="inline-flex items-center gap-1">
+                  <span>ئارامی: {peaceTier.label}</span>
+                  {peaceTier.icon}
+                  <span>(%{peaceScore})</span>
+                </span>
               </div>
             </div>
           </div>
@@ -604,30 +613,35 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
         <div className="flex items-center gap-2 overflow-x-auto pb-1.5 pt-0.5 no-scrollbar scroll-smooth">
           {[
-            { label: "نان و سەمون", amount: 1000, cat: 6, icon: "🥖", color: "border-amber-200/60 dark:border-amber-800/40 bg-amber-50/50 dark:bg-amber-950/30" },
-            { label: "تەکسی", amount: 3000, cat: 8, icon: "🚕", color: "border-yellow-200/60 dark:border-yellow-800/40 bg-yellow-50/50 dark:bg-yellow-950/30" },
-            { label: "چای و کافێ", amount: 2000, cat: 10, icon: "☕", color: "border-orange-200/60 dark:border-orange-800/40 bg-orange-50/50 dark:bg-orange-950/30" },
-            { label: "بەنزین", amount: 15000, cat: 8, icon: "⛽", color: "border-blue-200/60 dark:border-blue-800/40 bg-blue-50/50 dark:bg-blue-950/30" },
-            { label: "مارکێت", amount: 10000, cat: 6, icon: "🛒", color: "border-emerald-200/60 dark:border-emerald-800/40 bg-emerald-50/50 dark:bg-emerald-950/30" }
-          ].map((fav, i) => (
-            <button
-              key={i}
-              type="button"
-              disabled={Boolean(doc.closed)}
-              onClick={() => handle1TapExpense(fav)}
-              className={`shrink-0 flex items-center gap-2 py-2 px-3 rounded-2xl border ${fav.color} shadow-2xs hover:scale-102 active:scale-95 transition-all text-start cursor-pointer group`}
-            >
-              <span className="text-lg">{fav.icon}</span>
-              <div>
-                <span className="text-xs font-bold text-slate-800 dark:text-slate-100 block whitespace-nowrap">
-                  {fav.label}
-                </span>
-                <span className="text-[11px] font-mono font-bold text-teal-600 dark:text-teal-400 block whitespace-nowrap">
-                  +{fmt(fav.amount)} <span className="text-[9px] font-normal text-slate-400">د.ع</span>
-                </span>
-              </div>
-            </button>
-          ))}
+            { label: "نان و سەمون", amount: 1000, cat: 6, Icon: Utensils, iconBg: "bg-amber-100/80 dark:bg-amber-900/50 text-amber-600 dark:text-amber-400", color: "border-amber-200/60 dark:border-amber-800/40 bg-amber-50/50 dark:bg-amber-950/30" },
+            { label: "تەکسی", amount: 3000, cat: 8, Icon: Car, iconBg: "bg-yellow-100/80 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400", color: "border-yellow-200/60 dark:border-yellow-800/40 bg-yellow-50/50 dark:bg-yellow-950/30" },
+            { label: "چای و کافێ", amount: 2000, cat: 10, Icon: Coffee, iconBg: "bg-orange-100/80 dark:bg-orange-900/50 text-orange-600 dark:text-orange-400", color: "border-orange-200/60 dark:border-orange-800/40 bg-orange-50/50 dark:bg-orange-950/30" },
+            { label: "بەنزین", amount: 15000, cat: 8, Icon: Fuel, iconBg: "bg-blue-100/80 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400", color: "border-blue-200/60 dark:border-blue-800/40 bg-blue-50/50 dark:bg-blue-950/30" },
+            { label: "مارکێت", amount: 10000, cat: 6, Icon: ShoppingBag, iconBg: "bg-emerald-100/80 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400", color: "border-emerald-200/60 dark:border-emerald-800/40 bg-emerald-50/50 dark:bg-emerald-950/30" }
+          ].map((fav, i) => {
+            const FavIcon = fav.Icon;
+            return (
+              <button
+                key={i}
+                type="button"
+                disabled={Boolean(doc.closed)}
+                onClick={() => handle1TapExpense(fav)}
+                className={`shrink-0 flex items-center gap-2 py-2 px-3 rounded-2xl border ${fav.color} shadow-2xs hover:scale-102 active:scale-95 transition-all text-start cursor-pointer group`}
+              >
+                <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${fav.iconBg}`}>
+                  <FavIcon className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-800 dark:text-slate-100 block whitespace-nowrap">
+                    {fav.label}
+                  </span>
+                  <span className="text-[11px] font-mono font-bold text-teal-600 dark:text-teal-400 block whitespace-nowrap">
+                    +{fmt(fav.amount)} <span className="text-[9px] font-normal text-slate-400">د.ع</span>
+                  </span>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -639,6 +653,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
         <button
           type="button"
           onClick={() => {
+            haptics.medium();
             setModalDefaultRepeat(false);
             setModalDefaultCat(6);
             setEditingTx(null);
@@ -653,7 +668,10 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
         <button
           type="button"
-          onClick={() => setIsVoiceModalOpen(true)}
+          onClick={() => {
+            haptics.medium();
+            setIsVoiceModalOpen(true);
+          }}
           disabled={Boolean(doc.closed)}
           className="col-span-1 py-3 px-2 bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98"
           title="تۆماری دەنگی"
@@ -664,7 +682,10 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
         <button
           type="button"
-          onClick={() => fileInputRef.current?.click()}
+          onClick={() => {
+            haptics.light();
+            fileInputRef.current?.click();
+          }}
           disabled={isScanning || Boolean(doc.closed)}
           className="col-span-1 py-3 px-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-850 text-slate-800 dark:text-slate-100 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98"
           title="سکانی وەسڵ بە کامێرا"
@@ -675,12 +696,15 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
         <button
           type="button"
-          onClick={() => setIsImpulseModalOpen(true)}
+          onClick={() => {
+            haptics.light();
+            setIsImpulseModalOpen(true);
+          }}
           className="col-span-4 sm:col-span-1 py-2 sm:py-3 px-2 bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 dark:hover:bg-amber-900/50 text-amber-800 dark:text-amber-200 border border-amber-300 dark:border-amber-800 rounded-2xl shadow-2xs transition-all flex items-center justify-center gap-1.5 font-bold text-xs cursor-pointer active:scale-98"
           title="سندووقی ٢٤ کاتژمێر بۆ ڕاگرتنی خەرجی کاتی"
         >
           <Clock className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-          <span className="text-xs">⏳ سندووقی ٢٤ کاتژمێر</span>
+          <span className="text-xs">سندووقی ٢٤ کاتژمێر</span>
         </button>
       </div>
 
@@ -698,8 +722,9 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
       {/* QUICK RATES MODAL (Gold & USD FX)                        */}
       {/* ======================================================== */}
       {showRateModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs">
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in zoom-in-95 duration-150">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/50 backdrop-blur-xs">
+          <div className="bg-white dark:bg-slate-900 rounded-t-3xl sm:rounded-3xl p-5 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-bottom-5 sm:zoom-in-95 duration-150 pb-[max(24px,env(safe-area-inset-bottom))]">
+            <div className="w-12 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mx-auto mb-3 sm:hidden" />
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <Coins className="w-4 h-4 text-amber-500" />
@@ -1032,7 +1057,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <h4 className="text-sm font-bold text-white">پێداچوونەوەی ئێواران 🌙</h4>
+                  <h4 className="text-sm font-bold text-white">پێداچوونەوەی ئێواران</h4>
                   <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-400/20 text-indigo-200 font-semibold">
                     کۆتایی ڕۆژ
                   </span>
@@ -1063,7 +1088,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
                 className="py-2 px-3.5 bg-white/10 hover:bg-white/20 text-indigo-100 rounded-xl text-xs font-bold transition border border-white/15 cursor-pointer flex items-center gap-1.5"
               >
                 <Check className="w-3.5 h-3.5" />
-                <span>هەمووی تۆمارە 👍</span>
+                <span>هەمووی تۆمارە</span>
               </button>
             </div>
           </div>
@@ -1114,7 +1139,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20 flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-              <span>{noSpendDaysCount} ڕۆژی بێ-خەرجی 🌟</span>
+              <span>{noSpendDaysCount} ڕۆژی بێ-خەرجی</span>
             </span>
 
             <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1.5 ${
@@ -1123,7 +1148,17 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
                 : 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
             }`}>
               <span className={`w-2 h-2 rounded-full ${isTodayOver ? 'bg-amber-500 animate-pulse' : 'bg-emerald-500'}`} />
-              <span>{isTodayOver ? 'ڕاهێنەر: خەمت نەبێت 🌿' : 'ئاستی سەلامەتی: نایابە 🛡️'}</span>
+              {isTodayOver ? (
+                <span className="inline-flex items-center gap-1">
+                  <span>ڕاهێنەر: خەمت نەبێت</span>
+                  <Leaf className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1">
+                  <span>ئاستی سەلامەتی: نایابە</span>
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                </span>
+              )}
             </span>
           </div>
         </div>
@@ -1135,17 +1170,23 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
             : 'bg-emerald-50/70 dark:bg-emerald-950/30 border-emerald-200/80 dark:border-emerald-900/50 text-emerald-900 dark:text-emerald-200'
         }`}>
           {isTodayOver ? (
-            <p>
-              🌿 <b>ئارام بە، هیچ کێشەیەک نییە!</b> تێپەڕاندنی ڕۆژانە بەشێکە لە ژیانی سروشتی خێزان. ئەگەر لە ٣ ڕۆژی داهاتوودا ڕۆژانە بڕی{' '}
-              <b className="font-mono font-bold">{fmt(Math.round((todaySpent - dailyAllowance) / 3))} {t('iqd')}</b> کەمتر خەرج بکەیت،
-              هاوسەنگی داراییەکەت بە تەواوی دەگەڕێتەوە شوێنی خۆی بەبێ ئەوەی هەست بە هیچ گوشارێک بکەیت.
-            </p>
+            <div className="flex items-start gap-2">
+              <Leaf className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+              <p>
+                <b>ئارام بە، هیچ کێشەیەک نییە!</b> تێپەڕاندنی ڕۆژانە بەشێکە لە ژیانی سروشتی خێزان. ئەگەر لە ٣ ڕۆژی داهاتوودا ڕۆژانە بڕی{' '}
+                <b className="font-mono font-bold">{fmt(Math.round((todaySpent - dailyAllowance) / 3))} {t('iqd')}</b> کەمتر خەرج بکەیت،
+                هاوسەنگی داراییەکەت بە تەواوی دەگەڕێتەوە شوێنی خۆی بەبێ ئەوەی هەست بە هیچ گوشارێک بکەیت.
+              </p>
+            </div>
           ) : (
-            <p>
-              🛡️ <b>دەستخۆش! هەنگاوەکانت زۆر زیرەکانەن.</b> هێشتا بڕی{' '}
-              <b className="font-mono font-bold">{fmt(todayRemaining)} {t('iqd')}</b> لە باڵانسی ئارامی ئەمڕۆت ماوە.
-              پاراستنی ئەم هاوسەنگییە دڵنیایی دەدات کە تا هاتنی مووچەی نوێ لە ئاسوودەیی داراییدا بیت.
-            </p>
+            <div className="flex items-start gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+              <p>
+                <b>دەستخۆش! هەنگاوەکانت زۆر زیرەکانەن.</b> هێشتا بڕی{' '}
+                <b className="font-mono font-bold">{fmt(todayRemaining)} {t('iqd')}</b> لە باڵانسی ئارامی ئەمڕۆت ماوە.
+                پاراستنی ئەم هاوسەنگییە دڵنیایی دەدات کە تا هاتنی مووچەی نوێ لە ئاسوودەیی داراییدا بیت.
+              </p>
+            </div>
           )}
         </div>
 
@@ -1223,7 +1264,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
             {peaceScore >= 75 && (
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200/80 dark:border-emerald-800/60 text-emerald-800 dark:text-emerald-200 text-[11px] font-bold">
                 <Award className="w-3.5 h-3.5 text-emerald-500" />
-                <span>مەدالیای هاوسەنگی 💎</span>
+                <span>مەدالیای هاوسەنگی</span>
               </span>
             )}
           </div>
@@ -1610,8 +1651,9 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
       {/* Payday Cycle Settings Modal (سووڕی مانگی مووچە) */}
       {showPaydayModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in zoom-in-95 duration-150">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
+          <div className="bg-white dark:bg-slate-900 rounded-t-3xl sm:rounded-3xl p-6 max-w-sm w-full border border-slate-200 dark:border-slate-800 shadow-2xl animate-in slide-in-from-bottom-5 sm:zoom-in-95 duration-150 pb-[max(24px,env(safe-area-inset-bottom))]">
+            <div className="w-12 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mx-auto mb-3 sm:hidden" />
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <div className="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center">
@@ -1690,7 +1732,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
         </div>
       )}
 
-      {/* Kurdish Voice AI Modal (🎙️) */}
+      {/* Kurdish Voice AI Modal */}
       <VoiceExpenseModal
         isOpen={isVoiceModalOpen}
         onClose={() => setIsVoiceModalOpen(false)}
@@ -1702,9 +1744,9 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
 
       {/* Floating 1-Tap Toast Notification with Undo */}
       {quickToast && (
-        <div className="fixed bottom-20 sm:bottom-6 start-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-4 py-2.5 bg-slate-900/95 dark:bg-white/95 text-white dark:text-slate-900 rounded-2xl shadow-2xl backdrop-blur-md border border-white/10 dark:border-slate-800 text-xs font-bold animate-in fade-in slide-in-from-bottom-3 duration-200">
+        <div className="fixed bottom-24 sm:bottom-6 inset-x-0 mx-auto w-max max-w-[92vw] z-50 flex items-center gap-2.5 px-4 py-2.5 bg-slate-900/95 dark:bg-white/95 text-white dark:text-slate-900 rounded-2xl shadow-2xl backdrop-blur-md border border-white/10 dark:border-slate-800 text-xs font-bold animate-in fade-in slide-in-from-bottom-3 duration-200">
           <CheckCircle2 className="w-4 h-4 text-emerald-400 dark:text-emerald-600 shrink-0" />
-          <span>{quickToast.message}</span>
+          <span className="truncate">{quickToast.message}</span>
           <button
             type="button"
             onClick={() => {
@@ -1714,7 +1756,7 @@ export const ExpensesTab: React.FC<ExpensesTabProps> = ({
               }
               setQuickToast(null);
             }}
-            className="ms-2 px-2.5 py-1 bg-white/20 dark:bg-black/10 hover:bg-white/30 rounded-lg text-emerald-300 dark:text-emerald-700 text-[11px] font-bold flex items-center gap-1 cursor-pointer"
+            className="ms-1 px-2.5 py-1 bg-white/20 dark:bg-black/10 hover:bg-white/30 rounded-lg text-emerald-300 dark:text-emerald-700 text-[11px] font-bold flex items-center gap-1 cursor-pointer shrink-0"
           >
             <RotateCcw className="w-3 h-3" />
             <span>پاشگەزبوونەوە</span>

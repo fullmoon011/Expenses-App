@@ -101,7 +101,7 @@ export const CloudSyncModal: React.FC<CloudSyncModalProps> = ({
     try {
       const backupId = `${user.uid}_${workspaceId || 'main'}`;
       await saveCloudBackup(backupId, workspaceName, getFullBackupPayload());
-      setStatusMsg('هەموو زانیارییەکان بە سەرکەوتوویی لە هەور پاشەکەوت کران ☁️');
+      setStatusMsg('هەموو زانیارییەکان بە سەرکەوتوویی لە هەور پاشەکەوت کران');
       await fetchBackups();
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : 'هەڵە لە پاشەکەوتکردن');
@@ -117,7 +117,7 @@ export const CloudSyncModal: React.FC<CloudSyncModalProps> = ({
     try {
       const parsed = JSON.parse(record.payload);
       await onRestoreBackup(parsed);
-      setStatusMsg(`پاشەکەوتی "${record.workspaceName}" بە سەرکەوتوویی گەڕێندرایەوە ✅`);
+      setStatusMsg(`پاشەکەوتی "${record.workspaceName}" بە سەرکەوتوویی گەڕێندرایەوە`);
     } catch (err) {
       setErrorMsg(err instanceof Error ? err.message : 'هەڵە لە گەڕاندنەوەی زانیارییەکان');
     } finally {
@@ -322,7 +322,7 @@ export const CloudSyncModal: React.FC<CloudSyncModalProps> = ({
                         await onRestoreBackup(payload);
                       });
                       setIsFamilyLive(true);
-                      setStatusMsg(`هاوبەشکردنی خێزان بە کۆدی ${familyCode.trim()} چالاک کرا! 👨‍👩‍👧‍👦`);
+                      setStatusMsg(`هاوبەشکردنی خێزان بە کۆدی ${familyCode.trim()} چالاک کرا!`);
                     } catch (err) {
                       setErrorMsg(err instanceof Error ? err.message : 'هەڵە لە هاوبەشکردنی خێزان');
                     } finally {
@@ -348,7 +348,7 @@ export const CloudSyncModal: React.FC<CloudSyncModalProps> = ({
                     try {
                       const rates = await fetchLiveGlobalFxRates(usdRate);
                       onUpdateFxRates(rates);
-                      setStatusMsg('نرخی دراوە جیهانییەکان (EUR, GBP, TRY, SAR, IRR) نوێکرایەوە 🌍');
+                      setStatusMsg('نرخی دراوە جیهانییەکان (EUR, GBP, TRY, SAR, IRR) نوێکرایەوە');
                     } catch {
                       setErrorMsg('نەتوانرا نرخی دراوەکان لە ئینتەرنێت بهێنرێت');
                     } finally {

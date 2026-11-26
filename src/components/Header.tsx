@@ -17,13 +17,18 @@ import {
   Cloud,
   Bell,
   FileText,
-  Sparkles
+  Sparkles,
+  Leaf,
+  AlertTriangle,
+  Clock,
+  Moon
 } from 'lucide-react';
 import { SmartNotification, requestBrowserNotifications } from '../utils/notifications';
 import { NamesConfig, SettingsConfig, WorkspaceAccount } from '../types';
 import { CategoryIcon } from './CategoryIcon';
 import { usePWAInstall } from '../hooks/usePWAInstall';
 import { shiftMonth } from '../utils/calculations';
+import { haptics } from '../utils/haptics';
 
 interface HeaderProps {
   t: (key: string) => string;
@@ -130,12 +135,15 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Month Selector & Controls */}
-        <div className="flex items-center gap-1.5 sm:gap-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           {/* Apple-style Month Selector Segment */}
           <div className="flex items-center bg-slate-100 dark:bg-slate-800/90 rounded-2xl p-1 border border-slate-200/80 dark:border-slate-700/80 shadow-2xs">
             <button
               type="button"
-              onClick={() => onChangeMonth(shiftMonth(currentMonth, -1))}
+              onClick={() => {
+                haptics.light();
+                onChangeMonth(shiftMonth(currentMonth, -1));
+              }}
               className="p-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-700 rounded-xl transition cursor-pointer"
               title={t('prev_month')}
             >
@@ -145,11 +153,14 @@ export const Header: React.FC<HeaderProps> = ({
               type="month"
               value={currentMonth}
               onChange={(e) => e.target.value && onChangeMonth(e.target.value)}
-              className="bg-transparent text-slate-900 dark:text-white text-xs md:text-sm font-bold focus:outline-none cursor-pointer px-1.5 text-center"
+              className="bg-transparent text-slate-900 dark:text-white text-xs md:text-sm font-bold focus:outline-none cursor-pointer px-1 text-center max-w-[125px] sm:max-w-none"
             />
             <button
               type="button"
-              onClick={() => onChangeMonth(shiftMonth(currentMonth, 1))}
+              onClick={() => {
+                haptics.light();
+                onChangeMonth(shiftMonth(currentMonth, 1));
+              }}
               className="p-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-700 rounded-xl transition cursor-pointer"
               title={t('next_month')}
             >
@@ -186,10 +197,11 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             {showNotifMenu && (
-              <div className="absolute top-full mt-2 end-0 z-50 w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-3.5 animate-in fade-in zoom-in-95 duration-150">
+              <div className="absolute top-full mt-2 end-0 z-50 w-72 sm:w-80 max-w-[calc(100vw-2rem)] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 p-3.5 animate-in fade-in zoom-in-95 duration-150">
                 <div className="flex items-center justify-between mb-2.5">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">
-                    ئاگادارکردنەوە زیرەکەکان 🔔
+                  <span className="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                    <Bell className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                    <span>ئاگادارکردنەوە زیرەکەکان</span>
                   </span>
                   <button
                     type="button"
@@ -203,8 +215,9 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
 
                 {notifications.length === 0 ? (
-                  <div className="text-center py-5 text-xs text-slate-400">
-                    هیچ ئاگادارکردنەوەیەکی نوێ نییە 🌿
+                  <div className="text-center py-5 text-xs text-slate-400 flex flex-col items-center gap-1.5">
+                    <Leaf className="w-6 h-6 text-emerald-500/70" />
+                    <span>هیچ ئاگادارکردنەوەیەکی نوێ نییە</span>
                   </div>
                 ) : (
                   <div className="space-y-2 max-h-64 overflow-y-auto">
@@ -220,8 +233,17 @@ export const Header: React.FC<HeaderProps> = ({
                         }`}
                       >
                         <div className="flex items-center justify-between gap-1 mb-0.5">
-                          <span className="font-bold text-slate-900 dark:text-white truncate">
-                            {n.title}
+                          <span className="font-bold text-slate-900 dark:text-white truncate flex items-center gap-1.5">
+                            {n.type === 'budget' ? (
+                              <AlertTriangle className={`w-3.5 h-3.5 shrink-0 ${n.urgent ? 'text-rose-500' : 'text-amber-500'}`} />
+                            ) : n.type === 'impulse' ? (
+                              <Clock className="w-3.5 h-3.5 shrink-0 text-amber-500" />
+                            ) : n.type === 'evening' ? (
+                              <Moon className="w-3.5 h-3.5 shrink-0 text-indigo-500" />
+                            ) : (
+                              <Bell className="w-3.5 h-3.5 shrink-0 text-teal-500" />
+                            )}
+                            <span className="truncate">{n.title}</span>
                           </span>
                           {n.percentage !== undefined && (
                             <span className={`text-[10px] font-mono px-1.5 py-0.2 rounded font-bold shrink-0 ${
@@ -256,7 +278,10 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Privacy Eye Button */}
           <button
-            onClick={onToggleLock}
+            onClick={() => {
+              haptics.medium();
+              onToggleLock();
+            }}
             title={isLocked ? t('enp') : t('locked')}
             className={`p-2.5 rounded-2xl border transition-all flex items-center justify-center cursor-pointer shadow-2xs ${
               isLocked

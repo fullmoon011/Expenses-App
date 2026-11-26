@@ -29,7 +29,8 @@ import {
   Tag,
   CircleDollarSign,
   HandCoins,
-  Receipt
+  Receipt,
+  Star
 } from 'lucide-react';
 import { SinkingFundItem, ShopItem, KumalaItem, EventItem, ImportantDateItem } from '../types';
 import { fmt, shiftMonth, getDaysDifference } from '../utils/calculations';
@@ -788,8 +789,9 @@ export const MoreTab: React.FC<MoreTabProps> = ({
                         {isMyTurnNow && !k.rc && (
                           <div className="p-3 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 rounded-xl flex items-center justify-between">
                             <div className="text-xs">
-                              <span className="font-bold text-emerald-800 dark:text-emerald-300 block">
-                                ئەمرۆ نۆرەی تۆیە لەم مانگەدا ({currentMonth})! 🎉
+                              <span className="font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
+                                <PartyPopper className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                                <span>ئەمرۆ نۆرەی تۆیە لەم مانگەدا ({currentMonth})!</span>
                               </span>
                               <span className="text-emerald-600 dark:text-emerald-400 text-[11px]">
                                 کاسەی کۆمەڵەکە ({fmt(totalPot)} IQD) وەربگرە و بیخەرە سەر داهاتی مانگت.
@@ -808,7 +810,7 @@ export const MoreTab: React.FC<MoreTabProps> = ({
                         {k.rc === 1 && (
                           <div className="text-xs text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1.5">
                             <CheckCircle2 className="w-4 h-4" />
-                            <span>کاسەی ئەم کۆمەڵەیە وەرگیراوە و خراوەتە ناو داهاتەوە ✓</span>
+                            <span>کاسەی ئەم کۆمەڵەیە وەرگیراوە و خراوەتە ناو داهاتەوە</span>
                           </div>
                         )}
 
@@ -838,10 +840,8 @@ export const MoreTab: React.FC<MoreTabProps> = ({
                                   title={`${stepMonth} - ${isPaid ? 'دراوە' : 'نەدراوە'}`}
                                 >
                                   {isPaid && <Check className="w-2.5 h-2.5" />}
-                                  <span>
-                                    {stepMonth.slice(5)}
-                                    {isMine ? ' ⭐' : ''}
-                                  </span>
+                                  <span>{stepMonth.slice(5)}</span>
+                                  {isMine && <Star className="w-2.5 h-2.5 fill-amber-500 text-amber-500 shrink-0" />}
                                 </button>
                               );
                             })}

@@ -84,18 +84,18 @@ export const MonthlySummaryCard: React.FC<MonthlySummaryCardProps> = ({
       .map((c, i) => `${i + 1}. ${c.name}: ${fmt(c.spent)} IQD (${c.pct}%)`)
       .join('\n');
 
-    return `📊 *${t('summary_month_title')} ${monthName} ${yearStr}*\n` +
+    return `*${t('summary_month_title')} ${monthName} ${yearStr}*\n` +
       `━━━━━━━━━━━━━━━━━━\n` +
-      `💰 *${t('inc')}:* ${fmt(totals.inc)} IQD\n` +
-      `🛒 *${t('exp')}:* ${fmt(totals.exp)} IQD\n` +
-      `💎 *${t('ns')}:* ${fmt(netSavings)} IQD (${savingsRatePct}%)\n\n` +
-      `🔥 *${t('bycat')}:*\n${topLines || t('none')}\n\n` +
-      `🎯 *50/30/20:*\n` +
+      `• *${t('inc')}:* ${fmt(totals.inc)} IQD\n` +
+      `• *${t('exp')}:* ${fmt(totals.exp)} IQD\n` +
+      `• *${t('ns')}:* ${fmt(netSavings)} IQD (${savingsRatePct}%)\n\n` +
+      `*${t('bycat')}:*\n${topLines || t('none')}\n\n` +
+      `*50/30/20:*\n` +
       `• ${t('needs_50') || '50% Needs'}: ${fmt(ruleBreakdown.needs)} IQD (${ruleBreakdown.needsPct}%)\n` +
       `• ${t('wants_30') || '30% Wants'}: ${fmt(ruleBreakdown.wants)} IQD (${ruleBreakdown.wantsPct}%)\n` +
       `• ${t('savings_20') || '20% Savings'}: ${fmt(ruleBreakdown.savings)} IQD (${ruleBreakdown.savingsPct}%)\n\n` +
-      `✨ *Status:* ${statusBadge.text}\n` +
-      `📱 _Dahatu_`;
+      `*Status:* ${statusBadge.text}\n` +
+      `_Dahatu_`;
   };
 
   // Copy to clipboard
@@ -259,7 +259,7 @@ export const MonthlySummaryCard: React.FC<MonthlySummaryCardProps> = ({
 
       ctx.fillStyle = '#f8fafc';
       ctx.font = 'bold 20px "Noto Sans Arabic", sans-serif';
-      ctx.fillText(`🎯 ${t('pdf_rule_503020_title')}`, width - 70, yRule + 45);
+      ctx.fillText(t('pdf_rule_503020_title'), width - 70, yRule + 45);
 
       ctx.fillStyle = '#94a3b8';
       ctx.font = '16px "Noto Sans Arabic", sans-serif';
